@@ -1,0 +1,130 @@
+:root {
+  --spectrum-red: lch(from #E31F26 l c h);
+  --antwarp-blue: lch(from #007190 l c h);
+  --text: #000;
+  --highlight: var(--spectrum-red); 
+  --background: #FFF;
+  --url: var(--antwarp-blue);
+}
+
+@media print {
+
+  /* 1. Page Setup */
+  @page {
+    size: letter portrait;
+    margin: 1in; /* Standard margins for print */
+  }
+
+  body {
+    /* Palatino for body, with fallbacks */
+    font-family: "Palatino Linotype", Palatino, "Times New Roman", Georgia, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--background);
+  }
+
+  /* 2. Hide Non-Essential Elements */
+  .sidebar {
+    display: none !important;
+  }
+
+  iframe {
+    display: none !important;
+  }
+
+  div.content {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  /* 3. Typography & Headings */
+  h1 { font-size: 24pt; }
+
+  h2 { font-size: 18pt; }
+
+  h3 { font-size: 14pt; }
+
+  h4 { font-size: 12pt; }
+
+  h1, h2, h3, h4 {
+    font-family: "Roboto Condensed", "Arial Narrow", sans-serif-condensed, sans-serif;
+    font-weight: bold;
+    color: var(--highlight);
+    break-after: avoid;
+    /* Older browser support */
+    page-break-after: avoid;
+  }
+
+  /* 4. Figures & Images */
+
+  figure {
+    width: 3.36in;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  img {
+    /* Allow the image to use its full, high-res width */
+    max-width: 100% !important; 
+    width: auto !important;
+    height: auto !important;
+    /*image-resolution: 300dpi;*/
+  }
+
+  figcaption {
+    margin-top: 0.5em;
+    font-size: 10pt;
+    text-align: center;
+    font-style: italic;
+  }
+
+  #banner {
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 3 / 1 ;
+  }
+
+  /* 5. Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 0.5px solid var(--highlight);
+    border-bottom: 0.5px solid var(--highlight);
+    margin: 1cm 0;
+    page-break-inside: auto; /* Allow large tables to break if necessary */
+  }
+
+  tr { page-break-inside: avoid; page-break-after: auto; }
+
+  thead { display: table-header-group; } /* Repeat header on new page */
+
+  tfoot { display: table-footer-group; }
+
+  th, td {
+    border: none !important;
+    padding: 0;
+    text-align: left;
+  }
+
+  li::marker {
+    color: var(--highlight);
+  }
+
+  /* 6. Links */
+  a {
+    color: var(--url);
+  }
+
+  a[href^="http"]:after {
+    content: " (" attr(href) ")"; /* Display URLs in parentheses */
+  }
+
+  .bottom {
+    color: var(--highlight);
+    text-align:center;
+    font-size: 10pt;
+  }
+}
