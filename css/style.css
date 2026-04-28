@@ -112,7 +112,6 @@ figcaption {
 }
 
 iframe {
-  loading: "eager";
   width: var(--imsize);
   max-width: 100%;
   object-fit: cover;
@@ -123,11 +122,9 @@ iframe {
   object-fit: cover;
   object-position: center;
   aspect-ratio: 3 / 1 ;
-  loading: "auto";
 }
 
 #default {
-  loading: "lazy";
 }
 
 /*
