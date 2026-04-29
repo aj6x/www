@@ -11,11 +11,7 @@
   --background2: var(--benzol-green);
   --text: var(--pale-lemon-yellow);
   --highlight: var(--cobalt-green);
-  /*--background: var(--dull-viridian-green);
-  --background2: var(--benzol-green);
-  --highlight: var(--nile-blue);
-  --text: var(--lemon-yellow);*/
-    /* Calculated font sizes */
+  /* Calculated font sizes */
   --h4: var(--base-size);
   --h3: calc(var(--h4) * var(--ratio));
   --h2: calc(var(--h3) * var(--ratio));
