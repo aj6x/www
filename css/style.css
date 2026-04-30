@@ -79,14 +79,6 @@ tr:nth-child(even) {
   color: var(--background);
 }
 
-span {
-  display: block;
-  width: fit-content; /* Or a specific width */
-  margin: 0 auto;
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 1.66em;
-}
-
 figure {
   margin: 0; /* Removes the default indentation */
   padding: 0; /* Optional: ensures no default padding is left */
@@ -115,23 +107,11 @@ iframe {
 }
 
 #banner {
-  object-fit: cover;
+}
+/*  object-fit: cover;
   object-position: center;
   aspect-ratio: 3 / 1 ;
-}
-
-#default {
-}
-
-/*
-img {
-  width: 1344px;
-  max-width: 100%;
-  aspect-ratio: 16 / 9 ;
-  object-fit: cover;
-  object-position: center;
-  display: block; /* Removes unwanted space below the image *
-}
+}*/
 
 /* The side navigation menu */
 .sidebar {
@@ -164,6 +144,16 @@ img {
 .sidebar a:hover:not(.active) {
   background-color: var(--background);
   color: var(--text);
+}
+
+.sidebar img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 0;
+  max-width: 240px; /* Limits the width to your desired size */
+  width: 100%;      /* Allows it to shrink if container is smaller */
+  height: auto;     /* Keeps aspect ratio */
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
