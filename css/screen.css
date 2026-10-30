@@ -170,6 +170,11 @@ figure:is(.map, .aerial) img { max-height: none; }
    its caption and some text on a laptop (a capped photo is centred in its box) */
 figure.photo { max-width: var(--prose); margin-inline: auto; }
 figure.photo img { max-height: 70vh; max-height: 70svh; object-fit: contain; }
+/* a phone on its side: 70% of a ~400px window is a thumbnail, so a photo fills the visible height
+   (the caption follows just below, a short scroll away) */
+@media (orientation: landscape) and (max-height: 32em) {
+  figure.photo img { max-height: calc(100vh - 1rem); max-height: calc(100svh - 1rem); }
+}
 /* a panorama (2:1 or wider) takes the full column, like the maps: it's short enough anyway */
 figure.photo.wide { max-width: none; }
 
