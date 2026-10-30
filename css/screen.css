@@ -1,0 +1,501 @@
+/* AJ6X screen styles.
+   Colors: Sanzo Wada, "A Dictionary of Color Combinations" —
+   Antwarp Blue, Benzol Green, Cobalt Green, Pale Lemon Yellow.
+   The reading area uses a deepened Antwarp Blue (same OKLCH hue and chroma,
+   lightness 0.511 -> 0.419) so every text color passes WCAG at any size:
+     on deep Antwarp   lemon 7.1:1 (AAA), cobalt 4.6:1 (AA)
+     on Antwarp        lemon 4.8:1 (AA)          — table stripes, code blocks
+     on Benzol Green   lemon 3.1:1 (≥ 24px only) — navigation
+   Type: three heading sizes, body, and one small size; condensed for headings
+   and labels (Roboto Condensed, self-hosted, OFL), sans for reading text.
+   Layouts: small (< 40em, phones), medium (40–64em, top bar), large (≥ 64em, sidebar).
+   Photos span the full column (1008px); text sits in a narrower column centered under them. */
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/roboto-condensed-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --antwarp-blue: #007190;
+  --antwarp-deep: #005674;
+  --benzol-green: #00978d;
+  --cobalt-green: #96d1aa;
+  --pale-lemon-yellow: #ffefae;
+  --golden-yellow: #f3a257;           /* Wada no. 140 with Antwarp Blue: the route, on the map and its profile */
+
+  --bg: var(--antwarp-deep);
+  --bg-raised: var(--antwarp-blue);
+  --bg-alt: var(--benzol-green);
+  --text: var(--pale-lemon-yellow);
+  --accent: var(--cobalt-green);
+  --route: var(--golden-yellow);
+  --rule: color-mix(in oklab, var(--accent) 35%, var(--bg));
+
+  --measure: 63rem;          /* 1008px: column and image width */
+  --prose: 46rem;            /* 736px, ~75 characters per line at 21px */
+  --sidebar: 15rem;          /* 240px */
+  --gutter: 1rem;
+
+  /* modular scale; h3 never below 24px (navigation shares it) */
+  --base: 1.0625rem;
+  --ratio: 1.25;
+  --small: calc(var(--base) * 0.85);
+  --h3: max(1.5rem, var(--base) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio));
+
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --condensed: "Roboto Condensed", "Avenir Next Condensed", "Arial Narrow", sans-serif-condensed, sans-serif;
+
+  color-scheme: dark;
+}
+
+@media (min-width: 40em) {
+  :root { --gutter: 2rem; --base: 1.25rem; --ratio: 1.25; }
+}
+
+@media (min-width: 64em) {
+  :root { --base: 1.3125rem; --ratio: 1.333; }
+}
+
+/* ---- base */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 var(--base) / 1.5 var(--sans);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--condensed);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--accent);
+  margin: 1.6em 0 0.5em;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--h1); margin-top: 0.5em; }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h3); }
+h4 { font-size: var(--base); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* text column, centered under the full-width photos, banners, maps and tables (the fact sheet and
+   its RF table among them: tables take the full column, as figures do) */
+article > :not(.banner, figure, .row, iframe, .scroll, a, section.facts, dl.facts, details.rfi),
+main > header, main > .pager, .latest > h2 {
+  max-width: var(--prose);
+  margin-inline: auto;
+}
+
+p, li { text-wrap: pretty; }
+
+@media (max-width: 39.99em) {
+  p, li { hyphens: auto; }
+}
+
+/* labels: one small size, condensed, cobalt */
+.meta, figcaption, dl.facts dt, th, .pager, footer.site {
+  font-family: var(--condensed);
+  font-size: var(--small);
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover { color: var(--text); }
+
+:is(h1, h2, h3) a { color: inherit; text-decoration: none; }
+:is(h1, h2, h3) a:hover { color: var(--text); }
+
+:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+
+li::marker { color: var(--accent); }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+/* notes to self (HTML comments in the source): only in the drafts preview, never in print */
+aside.note {
+  margin: 1rem 0;
+  padding: 0.5rem 0.9rem;
+  border: 1px dashed var(--accent);
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+aside.note b { font-weight: 400; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85em; }
+aside.note p { margin: 0.3rem 0; }
+
+code, pre { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9em; }
+
+pre {
+  background: var(--bg-raised);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* ---- images (HDR where the screen supports it, see build.py:picture) */
+
+img { display: block; max-width: 100%; height: auto; }
+
+/* print versions of the logo and the map */
+.print-only { display: none; }
+
+figure { margin: 2rem 0; }
+
+figure img { width: 100%; }
+
+/* maps (topo, aerial, QSO): the full column, never capped, every line and label as large as it goes */
+figure:is(.map, .aerial) img { max-height: none; }
+
+/* photos: one per row, at the text width, never taller than 70% of the window, so it leaves room for
+   its caption and some text on a laptop (a capped photo is centred in its box) */
+figure.photo { max-width: var(--prose); margin-inline: auto; }
+figure.photo img { max-height: 70vh; max-height: 70svh; object-fit: contain; }
+/* a panorama (2:1 or wider) takes the full column, like the maps: it's short enough anyway */
+figure.photo.wide { max-width: none; }
+
+/* QSO map: the earth and the overlays stacked, clipped round; round leaves the corners empty, so
+   it may fill the window's height (photos stop at 70%): scrolled to, it's all map */
+figure.qsomap .disk { display: grid; width: min(100%, 92vh); width: min(100%, 92svh); margin: 0 auto; }
+figure.qsomap .disk img { grid-area: 1 / 1; width: 100%; height: auto; max-height: none; clip-path: circle(50%); }
+/* the QSOs, inline: hover, tap or tab to a marker for its calls (the label after each hit area) */
+figure.qsomap .disk svg { grid-area: 1 / 1; width: 100%; height: auto; overflow: visible; position: relative; z-index: 1; }   /* above the clipped (so stacked) images */
+figure.qsomap .tip { visibility: hidden; pointer-events: none; }
+figure.qsomap .hit:hover + .tip, figure.qsomap .hit:focus + .tip { visibility: visible; }
+figure.qsomap .hit { cursor: default; outline: none; }
+figure.qsomap .hit:focus-visible { stroke: #fff; stroke-width: 6; }
+figcaption .key { white-space: nowrap; margin-right: 0.6em; }
+figure.map a.full { display: block; cursor: zoom-in; }   /* the map opens its full-colour paper version */
+/* aerial photo: the photo and its marks stacked (both capped and centred alike) */
+figure.aerial .stack { display: grid; }
+figure.aerial .stack img { grid-area: 1 / 1; }
+/* its key on a patch of photo green, as the marks are drawn on the photo (summit.py PALETTES['photo']) */
+figure.aerial :is(.land, .zone) { display: inline-block; width: 1.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; background: #4d5d3a; }
+figure.aerial .land.public { box-shadow: inset 0 0 0 3px rgb(191 230 242 / 0.6), 0 0 0 1px #e6f7fc; }
+figure.aerial .land.closed { background: repeating-linear-gradient(45deg, #e31f26 0 2px, #4d5d3a 2px 6px); outline: 1px dashed #e31f26; }
+figure.aerial .land.easement { background: rgb(191 230 242 / 0.25); box-shadow: inset 0 0 0 1.5px #e6f7fc; }
+figure.aerial .zone.access { background: color-mix(in srgb, #f3a257 45%, #4d5d3a); outline: 2px dashed #f3a257; outline-offset: -2px; }
+figure.aerial .zone.other { outline: 2px dashed #f3a257; outline-offset: -2px; }
+figcaption .keys { display: block; margin-bottom: 0.2em; }
+figcaption .land { display: inline-block; width: 1.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; }
+figcaption .land.public { background: rgb(0 151 141 / 0.35); box-shadow: inset 0 0 0 2px rgb(0 151 141 / 0.8), 0 0 0 1px var(--cobalt-green); }
+figcaption .land.closed { background: repeating-linear-gradient(45deg, var(--cobalt-green) 0 1.5px, transparent 1.5px 6px); outline: 1px dashed var(--cobalt-green); }
+figcaption .land.easement { height: 0.4em; background: rgb(0 151 141 / 0.85); box-shadow: 0 0 0 1px var(--cobalt-green); }
+figcaption svg.line { width: 2.1em; height: 0.5em; margin-right: 0.3em; vertical-align: middle; overflow: visible; }   /* the map's road and trail styles (build.py:map_key) */
+figure.map figcaption .key svg.line { color: #ffefae; }   /* roads and trails, as on the screen map (summit.py PALETTES), not the caption's green */
+figcaption .key.private svg.line, figure.map figcaption .key.private svg.line { color: #d9a0ff; }   /* private ways, as on the map (summit.py PALETTES) */
+figcaption .dot {
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-right: 0.3em;
+  border-radius: 50%;
+  background: var(--band);
+  box-shadow: 0 0 0 1.5px var(--edge, #001018);
+}
+figcaption .dot.s2s { border-radius: 0; background: var(--text); clip-path: polygon(50% 0, 100% 100%, 0 100%); box-shadow: none; }
+figcaption .dot.rbn { background: none; box-shadow: inset 0 0 0 2px var(--text, currentColor); width: 0.6em; height: 0.6em; }   /* RBN: a ring, heard */
+
+/* a pair of photos (see build.py:place_figures) is side by side only in print: on screen no box of
+   its own, each photo the same size as any other, one per row (side by side, half width, the views
+   got too small, and pairs next to single photos looked like two sizes at random) */
+.row { display: contents; }
+
+figcaption {
+  max-width: var(--prose);
+  margin: 0.6em auto 0;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+@media (min-width: 40em) {
+  .banner img { aspect-ratio: 3 / 1; }
+}
+
+/* hand-cropped banner (3:1 export): never re-cropped */
+.banner.cropped img { aspect-ratio: auto; }
+
+iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  margin: 2rem 0;
+}
+
+/* ---- tables and fact sheets */
+
+/* tables: at least the text column wide, growing up to the photo width only when
+   their content needs it, centered; wider still scrolls sideways (phones) */
+.scroll { overflow-x: auto; margin-block: 1.5rem; }
+
+table { border-collapse: collapse; }
+
+.scroll table { min-width: min(100%, var(--prose)); margin-inline: auto; }
+
+th, td { padding: 0.5em 0.75em; text-align: left; vertical-align: top; }
+
+th { font-weight: 400; border-bottom: 2px solid var(--accent); }
+
+tbody tr:nth-child(odd) { background: var(--bg-raised); }
+
+/* label above value; two columns on phones, three in the text column */
+dl.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  margin-block: 1.5rem 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+dl.facts div {
+  padding: 0.4em 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+dl.facts dd { margin: 0; }
+
+/* a summit's two tables, the summit and the route, each under a small heading */
+section.facts { margin-block: 1.5rem 2rem; }
+h2.facts { font-size: var(--base); text-transform: uppercase; letter-spacing: 0.06em; margin: 1.25rem 0 0.4rem; }
+h2.facts:first-child { margin-top: 0; }
+section.facts dl.facts { margin-block: 0; }
+
+@media (min-width: 40em) {
+  dl.facts { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); column-gap: 2rem; }   /* three across the full column */
+}
+
+/* a summit's fact sheet (build.py FACT_GRID): always three columns, a row per question, so the rows
+   line up the same on every screen; a phone wraps the longer values instead of reflowing the grid */
+dl.facts.grid { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 0.75rem; }
+dl.facts.grid dd { font-size: 0.9em; }
+@media (min-width: 40em) { dl.facts.grid { column-gap: 2rem; } dl.facts.grid dd { font-size: 1em; } }
+
+/* ---- summit articles (see build.py, summits) */
+
+/* elevation profile: the SVG stretches to the plot box; labels are HTML */
+.profile { margin: 2rem 0; }
+.profile .plot {
+  position: relative;
+  height: 9rem;
+  margin: 0 0 1.6em 3.2em;
+}
+@media (min-width: 40em) { .profile .plot { height: 13rem; margin-left: 3.6em; } }
+.profile svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.profile .line { fill: none; stroke: var(--route); stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.profile .area { fill: color-mix(in oklab, var(--accent) 30%, var(--bg)); }
+.profile .grid { stroke: var(--rule); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.profile .az { fill: color-mix(in oklab, var(--text) 10%, var(--bg)); }
+.profile .tick {
+  position: absolute;
+  font-family: var(--condensed);
+  font-size: var(--small);
+  line-height: 1;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.profile .tick.y { right: 100%; bottom: var(--at); transform: translateY(50%); padding-right: 0.4em; }
+.profile .tick.x { top: 100%; left: var(--at); transform: translateX(-50%); padding-top: 0.4em; }
+.profile .tick.x.start { transform: none; }
+.profile .tick.zone { right: 0.4em; bottom: var(--at); padding-bottom: 0.3em; color: var(--text); }
+/* cell service under it: a strip per carrier on the same distance axis, its name in the margin */
+.profile .cell { margin: -0.2em 0 0.6em 3.2em; }
+@media (min-width: 40em) { .profile .cell { margin-left: 3.6em; } }
+.profile .strip { position: relative; height: 0.55em; margin-top: 0.35em; background: color-mix(in oklab, var(--text) 5%, var(--bg)); }
+.profile .strip span {
+  position: absolute; right: 100%; top: 50%; transform: translateY(-50%); padding-right: 0.4em;
+  font-family: var(--condensed); font-size: calc(var(--small) * 0.9); line-height: 1; color: var(--accent); white-space: nowrap;
+}
+.profile .strip svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.profile .cell .good, .cell-key .good { fill: var(--text); background: var(--text); }
+.profile .cell .fair, .cell-key .fair { fill: color-mix(in oklab, var(--text) 65%, var(--bg)); background: color-mix(in oklab, var(--text) 65%, var(--bg)); }
+.profile .cell .weak, .cell-key .weak { fill: color-mix(in oklab, var(--text) 38%, var(--bg)); background: color-mix(in oklab, var(--text) 38%, var(--bg)); }
+.cell-key span { white-space: nowrap; }
+.cell-key i { display: inline-block; width: 1.2em; height: 0.55em; margin: 0 0.25em 0 0.5em; vertical-align: 0.05em; }
+
+/* RF nearby: under the fact sheet, closed, like the logs */
+details.rfi { margin: -1rem 0 2rem; }
+details.rfi summary { cursor: pointer; color: var(--accent); font-family: var(--condensed); }
+details.rfi summary:hover { color: var(--text); }
+details.rfi p { font-size: var(--small); }
+details.rfi td:last-child, details.rfi th:last-child { text-align: right; }
+details.rfi table { width: 100%; font-family: var(--condensed); font-size: var(--small); }
+details.rfi td:not(:nth-child(2)) { white-space: nowrap; }   /* the service may wrap */
+
+/* QSO logs: one closed <details> per activation, opens without JavaScript */
+details.log { margin: 1rem auto; max-width: var(--prose); }
+details.log summary {
+  cursor: pointer;
+  font-family: var(--condensed);
+  color: var(--accent);
+}
+details.log summary:hover { color: var(--text); }
+details.log table { width: 100%; }
+details.log tbody tr { background: none; }   /* no stripes: the tint marks S2S only */
+
+/* summit-to-summit contacts: both stations on a summit, the rarest QSOs of an activation */
+details.log tr.s2s td { color: var(--text); background: color-mix(in oklab, var(--accent) 22%, var(--bg)); }
+:is(details.log, h3, .meta) .tag {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0 0.4em;
+  font-family: var(--condensed);
+  font-size: var(--small);
+  letter-spacing: 0.06em;
+  background: var(--text);
+  color: var(--bg);
+}
+:is(h3, .meta) .tag { vertical-align: 0.1em; font-weight: 400; margin-left: 0; }   /* the first activation of a summit */
+h3 .tag { vertical-align: 0.2em; margin-left: 0.4em; }
+
+/* ---- site frame: small layout first */
+
+header.site {
+  background: var(--bg-alt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem var(--gutter) 0;
+}
+
+header.site .logo img { width: 4.5rem; }
+
+header.site nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var(--condensed);
+  font-size: var(--h3);
+  line-height: 1.2;
+}
+
+/* nav: lemon on Benzol Green (large text); current page joins the page color */
+header.site nav a {
+  padding: 0.35em 0.7em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+header.site nav a:hover,
+header.site nav a[aria-current] { background: var(--bg); }
+
+main, footer.site {
+  width: 100%;
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+main { padding-block: 1rem 3rem; }
+
+footer.site {
+  padding-block: 1.5rem 3rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+/* medium: logo and links in one top bar, links sit on the content like tabs */
+@media (min-width: 40em) {
+  header.site {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  header.site .logo img { margin-bottom: 0.75rem; }
+  header.site nav a { padding: 0.45em 0.9em; }
+  main { padding-top: 2rem; }
+}
+
+/* large: sticky sidebar, content column beside it */
+@media (min-width: 64em) {
+  body {
+    display: grid;
+    grid-template-columns: var(--sidebar) minmax(0, 1fr);
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+  }
+  header.site {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 1rem 0;
+    overflow-y: auto;
+  }
+  header.site .logo img { width: 100%; padding: 0 1rem; margin: 0 0 1rem; }
+  header.site nav { flex-direction: column; flex-wrap: nowrap; }
+  /* the links' text on the hexagon's straight left side (x 3.215 of the logo's 48) */
+  header.site nav a { padding: 0.5em 1rem 0.5em calc(1rem + (var(--sidebar) - 2rem) * 3.215 / 48); }
+  main, footer.site { grid-column: 2; margin-inline: auto; }   /* centred in the space beside the sidebar */
+}
+
+/* ---- article bits */
+
+article > header h1 { margin-bottom: 0.25em; }
+
+.meta { margin-top: 0; }
+
+.flag {
+  display: inline-block;
+  padding: 0 0.45em;
+  background: var(--text);
+  color: var(--bg);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.card { margin: 2.5rem 0; }
+.card + .card { border-top: 1px solid var(--rule); padding-top: 2.5rem; }
+.card :is(h2, h3) { margin-block: 0.75em 0.25em; }
+.card .banner img { aspect-ratio: 3 / 1; }
+
+.latest { margin-top: 4rem; }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.pager a { text-decoration: none; }
+.pager [rel=next] { margin-left: auto; text-align: right; }
+
+.missing { font-style: italic; }
+
+/* the banner with a caption is a figure: full width like the plain one */
+figure.banner { margin: 0; }
+
+/* under the fact sheet: links down to the maps and the log */
+.jump { font-family: var(--condensed); font-size: var(--small); color: var(--accent); }

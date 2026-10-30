@@ -1,0 +1,280 @@
+/* AJ6X print styles: white paper, Sanzo Wada accents —
+   Spectrum Red for headings and rules, Antwarp Blue for links.
+   Type mirrors the screen: 11pt body, headings on a 1.25 ratio, one 9pt small size. */
+
+:root {
+  --spectrum-red: #e31f26;
+  --antwarp-blue: #007190;
+  --ink: #000;
+  --muted: #444;
+  --small: 9pt;
+  --condensed: "Roboto Condensed", "Avenir Next Condensed", "Arial Narrow", sans-serif-condensed, sans-serif;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/roboto-condensed-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;            /* print fetches it late: show the fallback rather than nothing */
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/roboto-condensed-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* text width 8.5in − 2 × 0.89in = 6.72in = 2016px at 300dpi, so a full-width
+   2016px photo (or 3:1 banner) prints at exactly 300dpi */
+@page {
+  size: letter portrait;
+  margin: 0.45in 0.89in;
+}
+
+html { font-size: 11pt; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  line-height: 1.45;
+}
+
+/* frame: print logo top right, no navigation */
+header.site { display: flex; justify-content: flex-end; }
+header.site nav { display: none; }
+header.site .logo img { width: 0.8in; height: auto; }
+/* under a banner, the logo goes beside the title instead (build.py), as on letterhead: no band of its own;
+   logo-mark.svg is logo-print.svg heavier for its small size (hexagon 0.85, a 0.18 outline on the goat and letters) */
+body:has(.banner) header.site { display: none; }
+article > header .mark { float: right; width: 0.62in; height: auto; margin: 0.02in 0 0 0.2in; }
+
+h1, h2, h3, h4 {
+  font-family: var(--condensed);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--spectrum-red);
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h1 { font-size: 22pt; margin: 0.15in 0 0.05in; }
+h2 { font-size: 17pt; margin: 0.25in 0 0.06in; }
+h3 { font-size: 14pt; margin: 0.2in 0 0.05in; }
+h4 { font-size: 11pt; margin: 0.15in 0 0.04in; text-transform: uppercase; letter-spacing: 0.06em; }
+/* the first activation of a summit: an outlined tag, no ink-heavy fill */
+:is(h3, .meta) .tag {
+  margin-left: 0.4em;
+  padding: 0 0.35em;
+  border: 0.75pt solid var(--spectrum-red);
+  font-size: var(--small);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  vertical-align: 0.2em;
+}
+
+/* labels: one small size, condensed, muted */
+.meta, figcaption, dl.facts dt, th, footer.site {
+  font-family: var(--condensed);
+  font-size: var(--small);
+  color: var(--muted);
+}
+
+p, li { orphans: 3; widows: 3; }
+
+li::marker { color: var(--spectrum-red); }
+
+a { color: var(--antwarp-blue); text-decoration: none; }
+:is(h1, h2, h3) a { color: inherit; }
+
+main a[href^="http"]:not(.ref)::after {
+  content: " (" attr(href) ")";
+  font-size: 0.8em;
+  word-break: break-all;
+}
+
+/* images: whole figures; a photo is at most 3.5in tall (a single 3:4 portrait 2.63in wide), and a
+   single one no wider than one of a pair (below), so text and photos share pages more often */
+img { display: block; max-width: 100%; height: auto; }
+
+/* the screen-only twins of the logo and the map (their print versions are .print-only) */
+.screen-only { display: none; }
+
+figure {
+  margin: 0.15in 0 0.2in;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+figure img {
+  width: 100%;
+  max-height: 3.5in;
+  object-fit: contain;
+}
+
+/* a single photo prints the size of one in a pair of landscapes (half the text width less the gap,
+   3.26in), centred, so every photo on paper is about the same size */
+:not(.row) > figure.photo { width: 3.26in; margin-inline: auto; }
+/* a panorama (2:1 or wider) alone takes the full text width: at 3.26in it would be a thin strip */
+:not(.row) > figure.photo.wide { width: auto; }
+
+/* pairs: widths proportional to aspect ratio, so both photos are the same height */
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.2in;
+  margin: 0.15in 0 0.2in;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.row figure { flex: var(--aspect, 1) 1 0; min-width: 0; margin: 0; }
+.row figure img { max-height: none; }
+
+/* the summit map starts a page, with its heading, at the full text width (6.72 × 6.8 in: its own frame,
+   taller than the screen map's 4:3); caption under it, and the elevation profile after it, a route sheet
+   on one page. page-break-* too: WebKit (Safari) paginates with those. A heading that starts a page
+   keeps no space above it (WebKit keeps it after a forced break) */
+h2#map { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; }
+:is(h2#map, h2#aerial, h2#qso-map) { margin-top: 0; }
+figure.map { break-inside: avoid; page-break-inside: avoid; margin: 0; }
+figure.map img.print-only { display: block; width: 6.72in; height: auto; max-height: none; margin: 0 auto; }   /* inches, not %: the same on any layout width; height from width and height */
+
+figcaption {
+  margin-top: 0.05in;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}
+
+.banner.cropped img { aspect-ratio: auto; }
+
+iframe, .pager, .more, aside.note { display: none; }
+
+/* summit articles: the profile prints (vector); the QSO logs don't, the sheets carry the totals */
+.profile { margin: 0.15in 0 0; break-inside: avoid; page-break-inside: avoid; }
+.profile .plot { position: relative; height: 0.75in; margin: 0 0 0.22in 0.5in; }
+.profile svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.profile .line { fill: none; stroke: var(--spectrum-red); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.profile .area { fill: #f3e4e4; }
+.profile .grid { stroke: #ccc; stroke-width: 0.5; vector-effect: non-scaling-stroke; }
+.profile .az { fill: #ececec; }
+.profile .tick { position: absolute; font-family: var(--condensed); font-size: var(--small); line-height: 1; color: var(--muted); white-space: nowrap; }
+.profile .tick.y { right: 100%; bottom: var(--at); transform: translateY(50%); padding-right: 4pt; }
+.profile .tick.x { top: 100%; left: var(--at); transform: translateX(-50%); padding-top: 3pt; }
+.profile .tick.x.start { transform: none; }
+.profile .tick.zone { right: 4pt; bottom: var(--at); padding-bottom: 2pt; }
+.profile .download { display: none; }
+.profile .cell { margin: -0.02in 0 0.08in 0.5in; }
+.profile .strip { position: relative; height: 0.07in; margin-top: 0.04in; background: #f2f2f2;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.profile .strip span { position: absolute; right: 100%; top: 50%; transform: translateY(-50%); padding-right: 4pt;
+  font-family: var(--condensed); font-size: 7pt; line-height: 1; color: var(--muted); white-space: nowrap; }
+.profile .strip svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.profile .cell .good, .cell-key .good { fill: #333; background: #333; }
+.profile .cell .fair, .cell-key .fair { fill: #888; background: #888; }
+.profile .cell .weak, .cell-key .weak { fill: #c4c4c4; background: #c4c4c4; }
+.cell-key i { display: inline-block; width: 0.16in; height: 0.07in; margin: 0 2pt 0 5pt; vertical-align: 0;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h2#log, details.log, details.rfi { display: none; }   /* the fact sheet carries the RFI rating */
+
+/* aerial photo: a page of its own with its heading, the map's size; the photo and its marks stacked;
+   its key on a patch of photo green, as on screen */
+h2#aerial { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; }
+figure.aerial { break-inside: avoid; page-break-inside: avoid; margin: 0; }
+figure.aerial .stack { display: grid; width: 6.72in; margin: 0 auto; }
+figure.aerial .stack img { grid-area: 1 / 1; width: 6.72in; height: 5.04in; max-height: none; }
+figure.aerial :is(.land, .zone) { display: inline-block; width: 1.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; background: #4d5d3a; box-shadow: none; outline: none; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+figure.aerial .land.public { box-shadow: inset 0 0 0 2px rgb(191 230 242 / 0.6); }
+figure.aerial .land.closed { background: repeating-linear-gradient(45deg, #e31f26 0 1.5px, #4d5d3a 1.5px 5px); }
+figure.aerial .land.easement { box-shadow: inset 0 0 0 1px #e6f7fc; }
+figure.aerial .zone.access { background: #a8834d; box-shadow: inset 0 0 0 1.5px #f3a257; }
+figure.aerial .zone.other { box-shadow: inset 0 0 0 1.5px #f3a257; }
+
+/* QSO map: a page of its own with its heading, the full text width round */
+h2#qso-map { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; }
+figure.qsomap .disk { display: grid; width: 6.72in; margin: 0 auto; }
+figure.qsomap .disk img { grid-area: 1 / 1; width: 6.72in; height: 6.72in; max-height: none; clip-path: circle(50%); }
+figure.qsomap .disk svg { grid-area: 1 / 1; width: 6.72in; height: 6.72in; position: relative; z-index: 1; }   /* above the clipped (so stacked) images */
+figure.qsomap .tip { display: none; }
+figcaption .key { white-space: nowrap; margin-right: 0.6em; }
+figcaption .keys { display: block; margin-bottom: 0.2em; }
+figcaption .land { display: inline-block; width: 1.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+figcaption .land.public { background: rgb(143 203 122 / 0.4); box-shadow: inset 0 0 0 2px rgb(143 203 122 / 0.9), 0 0 0 0.75pt #2f7d32; }
+figcaption .land.closed { background: repeating-linear-gradient(45deg, #2f7d32 0 1px, transparent 1px 5px); outline: 0.75pt dashed #2f7d32; }
+figcaption .land.easement { height: 0.4em; background: rgb(143 203 122 / 0.95); box-shadow: 0 0 0 0.75pt #2f7d32; }
+figcaption svg.line { width: 2.1em; height: 0.5em; margin-right: 0.3em; vertical-align: middle; overflow: visible; }   /* the map's road and trail styles (build.py:map_key) */
+figcaption .key.private svg.line { color: #7d3c98; }   /* private ways, as on the map (summit.py PALETTES) */
+figcaption .dot {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.25em;
+  border-radius: 50%;
+  background: var(--band);
+  box-shadow: 0 0 0 0.75pt var(--edge, #000);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+figcaption .dot.s2s { border-radius: 0; background: #000; clip-path: polygon(50% 0, 100% 100%, 0 100%); box-shadow: none; }
+figcaption .dot.rbn { background: none; box-shadow: inset 0 0 0 1.5pt #000; width: 0.6em; height: 0.6em; }
+
+.meta { margin-top: 0; }
+
+.flag { color: var(--spectrum-red); text-transform: uppercase; }
+
+/* tables and fact sheets: thin red rules */
+.scroll { margin: 0.15in 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-block: 0.75pt solid var(--spectrum-red);
+}
+
+thead { display: table-header-group; }
+tr { break-inside: avoid; page-break-inside: avoid; }
+th { text-align: left; border-bottom: 0.5pt solid var(--spectrum-red); }
+th, td { padding: 2pt 6pt 2pt 0; vertical-align: top; }
+
+dl.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.25in;
+  margin: 0.1in 0 0.2in;
+  border-block: 0.75pt solid var(--spectrum-red);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+dl.facts div { display: flex; align-items: baseline; gap: 6pt; padding: 2pt 0; }
+dl.facts dt { flex: 0 0 1.1in; }
+dl.facts dd { margin: 0; }
+
+/* a summit's fact sheet (build.py FACT_GRID): three columns, a row per question, the label above its value */
+dl.facts.grid { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 0.2in; }
+dl.facts.grid div { display: block; padding: 2pt 0 3pt; border-bottom: 0.5pt solid #e8b4b6; }
+dl.facts.grid dt { display: block; line-height: 1.2; }
+
+/* a summit's two tables under small headings, as h4 */
+section.facts { margin: 0.1in 0 0.2in; }
+h2.facts { font-size: 11pt; text-transform: uppercase; letter-spacing: 0.06em; margin: 0.12in 0 0.04in; }
+h2.facts:first-child { margin-top: 0; }
+section.facts dl.facts { margin: 0; }
+
+.card { break-inside: avoid; page-break-inside: avoid; margin: 0.2in 0; }
+
+footer.site {
+  margin-top: 0.3in;
+  padding-top: 0.08in;
+  border-top: 0.5pt solid var(--spectrum-red);
+  text-align: center;
+}
+
+figure.banner { margin: 0; }

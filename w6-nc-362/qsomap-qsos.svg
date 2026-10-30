@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2016 2016" width="2016" height="2016" class="qsos" font-family='"Roboto Condensed", "Avenir Next Condensed", "Arial Narrow", sans-serif' role="group" aria-label="QSOs">
+<g fill="none" stroke-linecap="round">
+<path d="M1008.0,1008.0L1037.0,56.0" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1249.6,1164.7" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1204.0,1267.5" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1341.6,1058.8" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1416.6,711.4" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1136.9,266.0" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1037.0,56.0" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1249.6,1164.7" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1204.0,1267.5" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1341.6,1058.8" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1416.6,711.4" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1136.9,266.0" stroke="#5959ff" stroke-width="3.8"/>
+</g>
+<circle cx="1145.6" cy="1253.1" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1145.6" cy="1253.1" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="1219.4" cy="1262.7" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1219.4" cy="1262.7" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="1848.9" cy="1380.2" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1848.9" cy="1380.2" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="1037.0" cy="56.0" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1249.6" cy="1164.7" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1204.0" cy="1267.5" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1341.6" cy="1058.8" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1416.6" cy="711.4" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1136.9" cy="266.0" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<path d="M1008.0,991.0l16.4,28.3h-32.9z" fill="#ffffff" stroke="#001018" stroke-width="3.8" stroke-linejoin="round"/>
+<circle class="hit" cx="1145.6" cy="1253.1" r="12.6" fill="transparent" tabindex="0" aria-label="W6YX heard AJ6X · 40m CW · 23 dB · 16 wpm · 18:55Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="235.3" y="1223.1" width="891.5" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="247.9" y="1265.2">W6YX heard AJ6X · 40m CW · 23 dB · 16 wpm · 18:55Z</text></g>
+<circle class="hit" cx="1219.4" cy="1262.7" r="12.6" fill="transparent" tabindex="0" aria-label="N6TV heard AJ6X · 40m CW · 10 dB · 16 wpm · 18:55Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="309.0" y="1232.8" width="891.5" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="321.6" y="1274.8">N6TV heard AJ6X · 40m CW · 10 dB · 16 wpm · 18:55Z</text></g>
+<circle class="hit" cx="1848.9" cy="1380.2" r="12.6" fill="transparent" tabindex="0" aria-label="ND7K heard AJ6X · 40m CW · 13 dB · 16 wpm · 18:56Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="938.5" y="1350.2" width="891.5" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="951.1" y="1392.3">ND7K heard AJ6X · 40m CW · 13 dB · 16 wpm · 18:56Z</text></g>
+<circle class="hit" cx="1037.0" cy="56.0" r="22.1" fill="transparent" tabindex="0" aria-label="WU7H · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="758.2" y="26.0" width="250.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="770.8" y="68.1">WU7H · 40m CW</text></g>
+<circle class="hit" cx="1249.6" cy="1164.7" r="22.1" fill="transparent" tabindex="0" aria-label="K6KM · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="970.8" y="1134.8" width="250.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="983.4" y="1176.8">K6KM · 40m CW</text></g>
+<circle class="hit" cx="1204.0" cy="1267.5" r="22.1" fill="transparent" tabindex="0" aria-label="AG6AQ · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="907.9" y="1237.5" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="920.5" y="1279.6">AG6AQ · 40m CW</text></g>
+<circle class="hit" cx="1341.6" cy="1058.8" r="22.1" fill="transparent" tabindex="0" aria-label="K6YK · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1062.8" y="1028.8" width="250.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1075.4" y="1070.9">K6YK · 40m CW</text></g>
+<circle class="hit" cx="1416.6" cy="711.4" r="22.1" fill="transparent" tabindex="0" aria-label="W7DLZ · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1120.5" y="681.5" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1133.1" y="723.6">W7DLZ · 40m CW</text></g>
+<circle class="hit" cx="1136.9" cy="266.0" r="22.1" fill="transparent" tabindex="0" aria-label="N7KOM · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="840.8" y="236.1" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="853.4" y="278.2">N7KOM · 40m CW</text></g>
+</svg>

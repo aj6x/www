@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>AJ6X</title>
+  <link rel="self" type="application/atom+xml" href="https://aj6x.com/feed.xml"/>
+  <link rel="alternate" type="text/html" href="https://aj6x.com/"/>
+  <id>https://aj6x.com/feed.xml</id>
+  <updated>2026-10-29T00:00:00Z</updated>
+  <author><name>AJ6X</name><uri>https://aj6x.com/</uri></author>
+  <icon>https://aj6x.com/favicon.svg</icon>
+  <entry>
+    <title>Hawkins Peak W6/SC-213</title>
+    <link rel="alternate" type="text/html" href="https://aj6x.com/w6-sc-213/"/>
+    <id>https://aj6x.com/w6-sc-213/</id>
+    <published>2026-10-29T00:00:00Z</published>
+    <updated>2026-10-29T00:00:00Z</updated>
+    <category term="sota" label="SOTA"/>
+    <summary>A 4 AM start by last week&#x27;s clock, stairs cut into the rock on the High Peaks, a volunteer with a Yagi, and a very hot way down Condor Gulch.</summary>
+    <rights>© 2026 G Blaj · CC BY-NC-ND 4.0</rights>
+  </entry>
+  <entry>
+    <title>South Chalone Peak W6/SC-153</title>
+    <link rel="alternate" type="text/html" href="https://aj6x.com/w6-sc-153/"/>
+    <id>https://aj6x.com/w6-sc-153/</id>
+    <published>2026-10-28T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="sota" label="SOTA"/>
+    <summary>Three ways into South Chalone&#x27;s activation zone: a summit decorated with trash, a snake that wouldn&#x27;t move, and 15m open to Japan from deep in the brush.</summary>
+    <rights>© 2026 G Blaj · CC BY-NC-ND 4.0</rights>
+  </entry>
+  <entry>
+    <title>North Chalone Peak W6/SC-149</title>
+    <link rel="alternate" type="text/html" href="https://aj6x.com/w6-sc-149/"/>
+    <id>https://aj6x.com/w6-sc-149/</id>
+    <published>2026-10-28T00:00:00Z</published>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <category term="sota" label="SOTA"/>
+    <summary>Three trips through the Bear Gulch caves to the fire lookout on North Chalone: 20m CW, and an Outhouse On The Air.</summary>
+    <rights>© 2026 G Blaj · CC BY-NC-ND 4.0</rights>
+  </entry>
+  <entry>
+    <title>Black Mountain W6/NC-386</title>
+    <link rel="alternate" type="text/html" href="https://aj6x.com/w6-nc-386/"/>
+    <id>https://aj6x.com/w6-nc-386/</id>
+    <published>2026-10-26T00:00:00Z</published>
+    <updated>2026-10-26T00:00:00Z</updated>
+    <category term="sota" label="SOTA"/>
+    <summary>The first ever activation of Black Mountain, on MALT&#x27;s Day on the Ranch: 40m for the regulars, 15m for DX, and a QRT mid-pileup.</summary>
+    <rights>© 2026 G Blaj · CC BY-NC-ND 4.0</rights>
+  </entry>
+  <entry>
+    <title>Hicks Mountain W6/NC-362</title>
+    <link rel="alternate" type="text/html" href="https://aj6x.com/w6-nc-362/"/>
+    <id>https://aj6x.com/w6-nc-362/</id>
+    <published>2026-10-26T00:00:00Z</published>
+    <updated>2026-10-26T00:00:00Z</updated>
+    <category term="sota" label="SOTA"/>
+    <summary>The first ever activation of a private Marin summit, on a MALT ranch hike: six contacts on 40m CW, with seven minutes to spare.</summary>
+    <rights>© 2026 G Blaj · CC BY-NC-ND 4.0</rights>
+  </entry>
+</feed>

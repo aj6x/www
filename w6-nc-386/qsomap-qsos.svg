@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2016 2016" width="2016" height="2016" class="qsos" font-family='"Roboto Condensed", "Avenir Next Condensed", "Arial Narrow", sans-serif' role="group" aria-label="QSOs">
+<g fill="none" stroke-linecap="round">
+<path d="M1008.0,1008.0L1627.2,233.5" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L188.2,482.3" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L194.3,460.1" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1294.9,1078.8" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1038.7,327.4" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1271.1,1124.9" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L897.8,420.2" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1172.6,1289.0" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1413.5,708.7" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1311.8,1177.7" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1627.2,233.5" stroke="#cca166" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L188.2,482.3" stroke="#cca166" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L194.3,460.1" stroke="#cca166" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1294.9,1078.8" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1038.7,327.4" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1271.1,1124.9" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L897.8,420.2" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1172.6,1289.0" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1413.5,708.7" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1311.8,1177.7" stroke="#5959ff" stroke-width="3.8"/>
+</g>
+<circle cx="1191.4" cy="1291.1" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1191.4" cy="1291.1" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="1266.5" cy="1290.6" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1266.5" cy="1290.6" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="1782.5" cy="1200.0" r="8.2" fill="none" stroke="#001018" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1782.5" cy="1200.0" r="8.2" fill="none" stroke="#cca166" stroke-width="4.1"/>
+<circle cx="1772.0" cy="707.7" r="8.2" fill="none" stroke="#001018" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1772.0" cy="707.7" r="8.2" fill="none" stroke="#cca166" stroke-width="4.1"/>
+<circle cx="1795.4" cy="865.2" r="8.2" fill="none" stroke="#001018" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1795.4" cy="865.2" r="8.2" fill="none" stroke="#cca166" stroke-width="4.1"/>
+<circle cx="1636.5" cy="1320.8" r="8.2" fill="none" stroke="#001018" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1636.5" cy="1320.8" r="8.2" fill="none" stroke="#cca166" stroke-width="4.1"/>
+<circle cx="1627.2" cy="233.5" r="11.0" fill="#cca166" stroke="#001018" stroke-width="3.1"/>
+<circle cx="188.2" cy="482.3" r="11.0" fill="#cca166" stroke="#001018" stroke-width="3.1"/>
+<circle cx="194.3" cy="460.1" r="11.0" fill="#cca166" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1294.9" cy="1078.8" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1038.7" cy="327.4" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1271.1" cy="1124.9" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="897.8" cy="420.2" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1172.6" cy="1289.0" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1413.5" cy="708.7" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1311.8" cy="1177.7" r="14.8" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<path d="M1008.0,991.0l16.4,28.3h-32.9z" fill="#ffffff" stroke="#001018" stroke-width="3.8" stroke-linejoin="round"/>
+<circle class="hit" cx="1191.4" cy="1291.1" r="12.6" fill="transparent" tabindex="0" aria-label="W6YX heard AJ6X · 40m CW · 13 dB · 13 wpm · 21:42Z; W6YX heard AJ6X · 40m CW · 47 dB · 13 wpm · 21:57Z; W6YX heard AJ6X · 40m CW · 39 dB · 13 wpm · 22:08Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="281.0" y="1216.2" width="891.5" height="149.9" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="293.6" y="1258.2">W6YX heard AJ6X · 40m CW · 13 dB · 13 wpm · 21:42Z</text><text x="293.6" y="1303.3">W6YX heard AJ6X · 40m CW · 47 dB · 13 wpm · 21:57Z</text><text x="293.6" y="1348.3">W6YX heard AJ6X · 40m CW · 39 dB · 13 wpm · 22:08Z</text></g>
+<circle class="hit" cx="1266.5" cy="1290.6" r="12.6" fill="transparent" tabindex="0" aria-label="N6TV heard AJ6X · 40m CW · 12 dB · 13 wpm · 21:58Z; N6TV heard AJ6X · 40m CW · 18 dB · 13 wpm · 22:07Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="356.2" y="1238.1" width="891.5" height="104.9" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="368.8" y="1280.2">N6TV heard AJ6X · 40m CW · 12 dB · 13 wpm · 21:58Z</text><text x="368.8" y="1325.2">N6TV heard AJ6X · 40m CW · 18 dB · 13 wpm · 22:07Z</text></g>
+<circle class="hit" cx="1782.5" cy="1200.0" r="12.6" fill="transparent" tabindex="0" aria-label="K5TR heard AJ6X · 15m CW · 19 dB · 13 wpm · 22:10Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="872.2" y="1170.1" width="891.5" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="884.8" y="1212.1">K5TR heard AJ6X · 15m CW · 19 dB · 13 wpm · 22:10Z</text></g>
+<circle class="hit" cx="1772.0" cy="707.7" r="12.6" fill="transparent" tabindex="0" aria-label="K9IMM heard AJ6X · 15m CW · 17 dB · 13 wpm · 22:10Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="844.3" y="677.8" width="908.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="856.9" y="719.8">K9IMM heard AJ6X · 15m CW · 17 dB · 13 wpm · 22:10Z</text></g>
+<circle class="hit" cx="1795.4" cy="865.2" r="12.6" fill="transparent" tabindex="0" aria-label="AC0C-1 heard AJ6X · 15m CW · 18 dB · 13 wpm · 22:10Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="850.4" y="835.3" width="926.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="863.0" y="877.3">AC0C-1 heard AJ6X · 15m CW · 18 dB · 13 wpm · 22:10Z</text></g>
+<circle class="hit" cx="1636.5" cy="1320.8" r="12.6" fill="transparent" tabindex="0" aria-label="KW7MM-3 heard AJ6X · 15m CW · 17 dB · 13 wpm · 22:10Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="674.1" y="1290.9" width="943.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="686.7" y="1332.9">KW7MM-3 heard AJ6X · 15m CW · 17 dB · 13 wpm · 22:10Z</text></g>
+<circle class="hit" cx="1627.2" cy="233.5" r="22.1" fill="transparent" tabindex="0" aria-label="F4WBN · 15m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1331.1" y="203.6" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1343.7" y="245.6">F4WBN · 15m CW</text></g>
+<circle class="hit" cx="188.2" cy="482.3" r="22.1" fill="transparent" tabindex="0" aria-label="7N1FRE · 15m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="216.5" y="452.4" width="285.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="229.1" y="494.4">7N1FRE · 15m CW</text></g>
+<circle class="hit" cx="194.3" cy="460.1" r="22.1" fill="transparent" tabindex="0" aria-label="JS2TNW · 15m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="222.6" y="430.2" width="285.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="235.2" y="472.3">JS2TNW · 15m CW</text></g>
+<circle class="hit" cx="1294.9" cy="1078.8" r="22.1" fill="transparent" tabindex="0" aria-label="KF6SWU · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="981.5" y="1048.9" width="285.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="994.1" y="1091.0">KF6SWU · 40m CW</text></g>
+<circle class="hit" cx="1038.7" cy="327.4" r="22.1" fill="transparent" tabindex="0" aria-label="WW7D · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="759.9" y="297.5" width="250.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="772.5" y="339.5">WW7D · 40m CW</text></g>
+<circle class="hit" cx="1271.1" cy="1124.9" r="22.1" fill="transparent" tabindex="0" aria-label="KE6X · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="992.3" y="1095.0" width="250.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1004.9" y="1137.1">KE6X · 40m CW</text></g>
+<circle class="hit" cx="897.8" cy="420.2" r="22.1" fill="transparent" tabindex="0" aria-label="NW7E · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="926.2" y="390.3" width="250.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="938.8" y="432.3">NW7E · 40m CW</text></g>
+<circle class="hit" cx="1172.6" cy="1289.0" r="22.1" fill="transparent" tabindex="0" aria-label="KM6AM · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="876.5" y="1259.1" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="889.1" y="1301.1">KM6AM · 40m CW</text></g>
+<circle class="hit" cx="1413.5" cy="708.7" r="22.1" fill="transparent" tabindex="0" aria-label="W7DLZ · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1117.4" y="678.8" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1130.0" y="720.8">W7DLZ · 40m CW</text></g>
+<circle class="hit" cx="1311.8" cy="1177.7" r="22.1" fill="transparent" tabindex="0" aria-label="K6KM · 40m CW; N6RUN · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1015.7" y="1125.3" width="267.8" height="104.9" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1028.3" y="1167.3">K6KM · 40m CW</text><text x="1028.3" y="1212.4">N6RUN · 40m CW</text></g>
+</svg>
