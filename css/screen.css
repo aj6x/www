@@ -91,7 +91,7 @@ h4 { font-size: var(--base); text-transform: uppercase; letter-spacing: 0.06em; 
 
 /* text column, centered under the full-width photos, banners, maps and tables (the fact sheet and
    its RF table among them: tables take the full column, as figures do) */
-article > :not(.banner, figure, .row, iframe, .scroll, a, section.facts, dl.facts, details.rfi),
+article > :not(.banner, figure, .row, iframe, .scroll, a, section.facts, dl.facts, details.rfi, details.s2s),
 main > header, main > .pager, .latest > h2 {
   max-width: var(--prose);
   margin-inline: auto;
@@ -191,7 +191,7 @@ figure.qsomap .hit:focus-visible { stroke: #fff; stroke-width: 6; }
 figcaption .key { white-space: nowrap; margin-right: 0.6em; }
 figure.map a.full { display: block; cursor: zoom-in; }   /* the map opens its full-colour paper version */
 /* aerial photo: the photo and its marks stacked (both capped and centred alike) */
-figure.aerial .stack { display: grid; }
+figure.aerial .stack { display: grid; width: min(100%, 91vh); width: min(100%, 91svh); margin: 0 auto; }   /* nearly square: all of it in the window */
 figure.aerial .stack img { grid-area: 1 / 1; }
 /* its key on a patch of photo green, as the marks are drawn on the photo (summit.py PALETTES['photo']) */
 figure.aerial :is(.land, .zone) { display: inline-block; width: 1.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; background: #4d5d3a; }
@@ -350,6 +350,42 @@ details.rfi p { font-size: var(--small); }
 details.rfi td:last-child, details.rfi th:last-child { text-align: right; }
 details.rfi table { width: 100%; font-family: var(--condensed); font-size: var(--small); }
 details.rfi td:not(:nth-child(2)) { white-space: nowrap; }   /* the service may wrap */
+
+/* Summit to summit: the groups, their dots on the map, the paths and the table */
+.s2s .dot, .s2smap .dot { display: inline-block; width: .7em; height: .7em; margin-right: .35em; border-radius: 50%; }
+.dot.duck { background: #fff6cc; }   /* one warm ramp, strongest link lightest, over a neutral map */
+.dot.easy { background: #ffcf70; }
+.dot.yagi { background: #f39a3c; }
+.dot.long { background: #c9582a; }
+.dot.far { background: #8a2f10; }
+ul.s2s { list-style: none; padding: 0; }
+figure.s2smap .stack { display: grid; width: min(100%, calc(92vh * var(--aspect))); width: min(100%, calc(92svh * var(--aspect))); margin: 0 auto; }   /* all of the map in the window, as with the QSO map */
+figure.s2smap .stack > * { grid-area: 1 / 1; width: 100%; height: auto; max-height: none; }
+figure.s2smap circle { stroke: #121e26; stroke-width: 1.5; }
+figure.s2smap circle.duck { fill: #fff6cc; }
+figure.s2smap circle.easy { fill: #ffcf70; }
+figure.s2smap circle.yagi { fill: #f39a3c; }
+figure.s2smap circle.long { fill: #c9582a; }
+figure.s2smap circle.far { fill: #8a2f10; }
+figure.s2smap polygon.here { fill: var(--accent); stroke: #000; stroke-width: 3; }
+figure.s2smap .key { margin-right: 1em; white-space: nowrap; }
+details.s2s { margin: 1rem auto; max-width: var(--measure); }
+details.s2s summary { max-width: var(--prose); margin-inline: auto; cursor: pointer; color: var(--accent); font-family: var(--condensed); }   /* in line with the text; opened, the content is wide */
+details.s2s summary:hover { color: var(--text); }
+details.s2s p { font-size: var(--small); }
+details.s2s table { width: 100%; font-family: var(--condensed); font-size: var(--small); }
+details.s2s td:not(:first-child), details.s2s th:not(:first-child) { text-align: right; white-space: nowrap; }
+details.s2s :is(td, th):nth-child(5) { text-align: left; }
+details.s2s th { white-space: normal !important; vertical-align: bottom; }
+details.s2s :is(td, th) { padding-inline: .4em; }
+.s2sprofile { margin: 1rem 0; }
+.s2sprofile svg { display: block; width: 100%; height: auto; }
+.s2sprofile polygon { fill: var(--bg-raised); }
+.s2sprofile line { stroke: var(--route); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.s2sprofile circle { fill: var(--route); }
+.s2sprofile line.blocked { stroke-dasharray: 6 5; }
+.s2sprofile figcaption { font-size: var(--small); font-family: var(--condensed); }
+.s2snote { font-size: var(--small); }
 
 /* QSO logs: one closed <details> per activation, opens without JavaScript */
 details.log { margin: 1rem auto; max-width: var(--prose); }

@@ -189,7 +189,7 @@ h2#log, details.log, details.rfi { display: none; }   /* the fact sheet carries 
 h2#aerial { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; }
 figure.aerial { break-inside: avoid; page-break-inside: avoid; margin: 0; }
 figure.aerial .stack { display: grid; width: 6.72in; margin: 0 auto; }
-figure.aerial .stack img { grid-area: 1 / 1; width: 6.72in; height: 5.04in; max-height: none; }
+figure.aerial .stack img { grid-area: 1 / 1; width: 6.72in; height: 6.8in; max-height: none; }   /* the frame of the hiking map's print version */
 figure.aerial :is(.land, .zone) { display: inline-block; width: 1.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; background: #4d5d3a; box-shadow: none; outline: none; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 figure.aerial .land.public { box-shadow: inset 0 0 0 2px rgb(191 230 242 / 0.6); }
 figure.aerial .land.closed { background: repeating-linear-gradient(45deg, #e31f26 0 1.5px, #4d5d3a 1.5px 5px); }
@@ -278,3 +278,30 @@ footer.site {
 }
 
 figure.banner { margin: 0; }
+
+/* Summit to summit: the map first, on a page with its heading, in a print frame of its own (6.72 × 7.8 in, wider than the screen map,
+   as the hiking map's); the groups and the notes after it. The hiking map's paper colors, and one red ramp, darkest for the
+   strongest link, so it reads in grey too. Explicit sizes: WebKit doesn't size an inline SVG from height: auto. The markers,
+   drawn for the screen frame, are placed by --left and --span. */
+h2#s2s { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; margin-top: 0; }
+details.s2s { display: none; }
+figure.s2smap { break-inside: avoid; page-break-inside: avoid; margin: 0; }
+figure.s2smap .stack { display: grid; width: 6.72in; height: calc(6.72in / var(--paper)); margin: 0 auto; overflow: hidden; }
+figure.s2smap .stack > :not(.screen-only) { display: block; grid-area: 1 / 1; width: 100%; height: 100%; max-width: none; max-height: none; }
+figure.s2smap .stack > svg:not(.screen-only) { width: calc(var(--span) * 100%); margin-left: calc(var(--left) * 100%); }
+figure.s2smap, .s2s .dot { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+figure.s2smap circle { stroke: #000; stroke-width: 1; }
+figure.s2smap polygon.here { fill: var(--antwarp-blue); stroke: #000; stroke-width: 3; }
+figure.s2smap circle.duck { fill: #6d0a10; }
+figure.s2smap circle.easy { fill: #c4161c; }
+figure.s2smap circle.yagi { fill: #ee6a4d; }
+figure.s2smap circle.long { fill: #f7a68e; }
+figure.s2smap circle.far { fill: #fcdcd0; }
+:is(.s2s, .s2smap) .dot { display: inline-block; width: .7em; height: .7em; margin-right: .35em; border-radius: 50%; box-shadow: inset 0 0 0 .5pt #000; }
+.dot.duck { background: #6d0a10; }
+.dot.easy { background: #c4161c; }
+.dot.yagi { background: #ee6a4d; }
+.dot.long { background: #f7a68e; }
+.dot.far { background: #fcdcd0; }
+ul.s2s { list-style: none; padding: 0; break-inside: avoid; page-break-inside: avoid; }
+.s2snote { font-size: var(--small); }
