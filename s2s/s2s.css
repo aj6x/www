@@ -86,3 +86,10 @@ html.s2s-locked { overflow: hidden; }
 @media (pointer: coarse) { .s2s-bands button { min-height: 44px; } }
 .s2sabout h3 { margin-block: 1.1em .2em; font-size: 1em; color: var(--accent); }
 .s2sabout p { margin-block: 0 .5em; }
+.s2s-picks { display: none; gap: 6px; }
+.s2s-picks select { min-height: 44px; max-width: 9.5em; padding: 0 .4em; font: inherit; color: #005674; background: #fff; border: 2px solid rgba(0, 0, 0, .2); border-radius: 4px; background-clip: padding-box; box-shadow: inset 0 -4px 0 var(--light, transparent); }
+.s2s-picks select[hidden] { display: none; }
+@media (max-width: 40em) {      /* a phone: dropdowns in place of the button rows */
+  #s2s-map .s2s-bands { display: none; }
+  #s2s-map .s2s-picks { display: flex; }
+}

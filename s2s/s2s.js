@@ -155,6 +155,12 @@
     return button;
   });
   const days = el('div', { className: 's2s-bands s2s-days', role: 'group', ariaLabel: 'Humidity' }, ...dayButtons);
+  // on a phone the button rows would cover the map: one line of two dropdowns instead, the same choices
+  const bandPick = el('select', { ariaLabel: 'Band' }, ...bandButtons.map(b => el('option', { value: b.dataset.band, textContent: b.textContent })));
+  bandPick.addEventListener('change', () => { location.hash = `${current ? current.ref : ''}${at(bandPick.value)}`; });
+  const dayPick = el('select', { ariaLabel: 'Humidity' }, ...dayButtons.map(b => el('option', { value: b.dataset.day, textContent: b.textContent })));
+  dayPick.addEventListener('change', () => { wet = dayPick.value; location.hash = `${current ? current.ref : ''}${tail()}`; });
+  const picks = el('div', { className: 's2s-picks' }, bandPick, dayPick);
   const Bands = L.Control.extend({
     options: { position: 'topright' },
     onAdd() {
@@ -173,6 +179,14 @@
     },
   });
   if (WEATHER.length) map.addControl(new Days());
+  const Picks = L.Control.extend({
+    options: { position: 'topright' },
+    onAdd() {
+      L.DomEvent.disableClickPropagation(picks);
+      return picks;
+    },
+  });
+  if (bandButtons.length > 1) map.addControl(new Picks());
   map.addControl(new Legend());
   const canvas = L.canvas({ padding: .3, tolerance: 4 });
   const view = L.layerGroup().addTo(map);
@@ -310,6 +324,11 @@
     });
     days.hidden = !humid(band);
     dayButtons.forEach(b => b.setAttribute('aria-pressed', b.dataset.day === wet));
+    [...bandPick.options].forEach((o, i) => { o.disabled = bandButtons[i].disabled; });
+    bandPick.value = band;
+    bandPick.style.setProperty('--light', LIGHT[band] ?? 'transparent');
+    dayPick.hidden = !humid(band);
+    dayPick.value = wet;
   }
 
   function home(note) {
