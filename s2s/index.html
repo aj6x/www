@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VHF+ S2S · AJ6X</title>
+  <meta name="description" content="Which SOTA summits can reach each other on every band from 6 m to 76 GHz, and with what antennas: calculated from terrain for 12,712 summits worldwide.">
+  <meta name="author" content="G Blaj">
+  <meta name="theme-color" content="#00978d">
+  <link rel="alternate" type="application/atom+xml" title="AJ6X" href="/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AJ6X">
+  <meta property="og:title" content="VHF+ S2S">
+  <meta property="og:description" content="Which SOTA summits can reach each other on every band from 6 m to 76 GHz, and with what antennas: calculated from terrain for 12,712 summits worldwide.">
+  <meta property="og:url" content="https://aj6x.com/s2s/">
+  <meta property="og:image" content="https://aj6x.com/s2s/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Map of California with colored dots on the summits Mt Davidson can reach on 2 m">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://aj6x.com/s2s/preview.jpg">
+  <script>
+  addEventListener('beforeprint', () => document.querySelectorAll('picture source[media*="dynamic-range"]').forEach(s => {
+    const img = s.parentNode.querySelector('img');
+    s.dataset.media = s.media; s.media = 'not all';
+    img.dataset.srcset = img.srcset; img.srcset = '';
+  }));
+  addEventListener('afterprint', () => document.querySelectorAll('picture source[data-media]').forEach(s => {
+    const img = s.parentNode.querySelector('img');
+    s.media = s.dataset.media; img.srcset = img.dataset.srcset;
+  }));
+  </script>
+  <link rel="canonical" href="https://aj6x.com/s2s/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/fonts/roboto-condensed-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/screen.css" media="screen">
+  <link rel="stylesheet" href="/css/print.css" media="print">
+</head>
+<body>
+  <header class="site">
+    <a class="logo" href="/"><img class="screen-only" src="/logo.svg" alt="AJ6X" width="240" height="240"><img class="print-only" src="/logo-print.svg" alt="AJ6X" width="240" height="240"></a>
+    <nav aria-label="Main">
+    <a href="/">Home</a>
+    <a href="/sota/">SOTA</a>
+    <a href="/s2s/" aria-current="page">VHF+ S2S</a>
+    <a href="/about/">About</a>
+    </nav>
+  </header>
+  <main>
+<article>
+<div class="banner cropped">
+<picture>
+  <source media="screen and (dynamic-range: high)" type="image/avif" srcset="/images/sota-2023-0327-banner/hdr-small.avif 1008w, /images/sota-2023-0327-banner/hdr-large.avif 2016w" sizes="(min-width: 64em) min(63rem, calc(100vw - 19rem)), (min-width: 40em) min(63rem, calc(100vw - 4rem)), calc(100vw - 2rem)">
+  <img src="/images/sota-2023-0327-banner/sdr-large.jpg" srcset="/images/sota-2023-0327-banner/sdr-small.jpg 1008w, /images/sota-2023-0327-banner/sdr-large.jpg 2016w" sizes="(min-width: 64em) min(63rem, calc(100vw - 19rem)), (min-width: 40em) min(63rem, calc(100vw - 4rem)), calc(100vw - 2rem)" alt="Summit view" width="2016" height="672" fetchpriority="high">
+</picture>
+</div>
+<header>
+<img class="print-only mark" src="/logo-mark.svg" alt="" width="240" height="240">
+<h1>VHF+ S2S</h1>
+<p class="meta">AJ6X · <time datetime="2026-10-30">30 October 2026</time> · updated <time datetime="2026-11-06">6 November 2026</time></p>
+</header>
+<p><link rel="stylesheet" href="/s2s/leaflet.css">
+<link rel="stylesheet" href="/s2s/s2s.css?v=4"></p>
+<div id="s2s" class="s2sapp">
+<noscript><p>This page needs JavaScript for its search and map.</p></noscript>
+<form id="s2s-form" role="search"><label for="s2s-search">Find a summit</label>
+<input id="s2s-search" type="search" placeholder="W6/NC-423 or a name" autocomplete="off" spellcheck="false"></form>
+<ul id="s2s-results"></ul>
+<div id="s2s-title"></div>
+<div id="s2s-map"></div>
+<div id="s2s-body"></div>
+<div class="s2snote s2sabout">
+<h3>What this is</h3>
+<p>A rough guide: calculated from the terrain, not measured. Contact logs show what worked, never what failed, so I can't check the misses. Possible here doesn't mean legal there, either: check the band privileges on both summits, yours and the other one's, especially across a border.</p>
+<h3>How I calculated it</h3>
+<p>NTIA's Irregular Terrain Model (ITM, Longley-Rice), point to point over the terrain profile of each path: continental temperate climate, average ground, antennas 6.5′ (2 m) up and aimed at each other, RFI left out. ITM covers line of sight, diffraction over ridges and the horizon, and tropospheric scatter beyond it. It holds to 20 GHz; above that I only count line of sight. On 6 m, that means no sporadic E or other openings, which now and then go much farther: this is what works on any day.</p>
+<h3>The groups</h3>
+<p>Each group is the easiest setup that works 90% of the time. Long shots work half of the time, very long shots a tenth, with the band's best setup. FM needs a 12 dB SINAD signal, −119.5 dBm at the receiver on 2 m; CW needs 0 dB over noise in 500 Hz. The FM setups must still work under a 65′ (20 m) canopy along the path, clear of the tops, and from 23 cm up every setup must, as trees block microwaves. Rubber duckies are the least certain group.</p>
+<h3>6 m to 70 cm</h3>
+<p>5 W, at the FM calling frequency: 52.525 MHz on 6 m, 146 on 2 m, 223.5 on 1.25 m, 446 on 70 cm. Rubber duckies are about −5.4 dBi each (−3 to −8), upright in the hand and facing the other summit; nobody carries one on 6 m. Half-waves are 2.15 dBi. The yagi on 2 m and 70 cm is the Arrow Antenna handheld: 3 elements on 2 m, 6.75 dBi, and 7 on 70 cm, about 10.5 dBi; on 6 m and 1.25 m, a 3-element yagi of the same gain. Noise is galactic noise (ITU-R P.372) plus a 6 dB receiver noise figure, so 6 m needs about 6.5 dB more signal than 2 m. 1.25 m is in the US and Canada only.</p>
+<h3>23 cm to 76 GHz</h3>
+<p>Each band has its own three setups, from what portable microwave stations carry: a transverter right at the antenna, driven by a QRP radio, at the narrowband calling frequency. 23 cm: 1 W FM handhelds, then 2 W into 10-element and 10 W into 22-element loop yagis, on CW. 13 and 6 cm: 1 W into small yagis or patches, then 1 W and 10 W into 60 cm dishes. 3 cm: 0.2 W into 20 dBi horns, then 0.2 W and 2 W into 60 cm dishes. 24, 47 and 76 GHz: 30 cm, then 40 cm dishes, at 100, 10 and 1 mW.</p>
+<p>Dishes are 55% efficient. Receivers have a 1.5 dB noise figure up to 10 GHz, then 3, 5 and 7 dB, with the antenna seeing half ground and half sky. Oxygen and water vapor absorb on every path (ITU-R P.676, line by line), less between high summits. Above 20 GHz a path needs 60% of the first Fresnel zone clear over the canopy, and then it's free space loss plus the gas. From 24 GHz up, bearings are to a tenth of a degree: a 30 cm dish there has a beam 1 to 3° wide, so aim well!</p>
+<h3>Weather</h3>
+<p>It's all for a fair-weather day of average humidity: 7.5 g/m³ of water vapor at sea level, no rain, no fog. On 3 cm and below, the weather changes less than a dB. From 24 GHz up, humidity costs a lot of dB: between summits 5,000′ (1,500 m) high and 60 miles (100 km) apart, a dry winter day (2 g/m³) gains about 6 dB on 24 GHz, and a humid summer day (15 g/m³) loses 8 on 24 GHz and 12 on 76 GHz. But dishes have dB to spare, and the horizon stops most paths first. On 24 GHz the weather changes no path at all, so the switch is on 47 and 76 GHz only. On 76 GHz, a humid day loses about 1 path in 11. Rain stops these bands: a shower 20 km across costs about 30 dB on 24 GHz. I left rain and ducting out on purpose. Both are local and of the day, and a map raining everywhere would just switch everything off. They work the other way too: rain scatter on 10 GHz and coastal ducting on 10 and 24 GHz go well past the horizon. None of that is in here.</p>
+<h3>More for 2 m</h3>
+<p>For 2 m, the trip reports here go further: the margin in dB for every setup, the terrain profiles of a few paths, and every summit in reach. That's too much data to publish for all the summits, but the ones I did publish let you check my numbers independently, against your own logs, or your own model.</p>
+<h3>Data</h3>
+<p>Summits with 10 or more activations<span id="s2s-listed"></span>, from the <a href="https://www.sota.org.uk/">SOTA</a> list. Terrain from USGS 3DEP and Natural Resources Canada's MRDEM at 30 m, and everywhere else from Copernicus GLO-30. That one is a surface model, with trees and buildings in it, so no canopy is added there, and narrow peaks can come out low: Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European Union and ESA; all rights reserved. Relief beyond those heights and ocean depths from Mapzen's <a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md">Terrain Tiles</a>, with USGS GMTED2010 and SRTM data and NOAA's ETOPO1. Rivers, roads, borders and names from Natural Earth; map by <a href="https://leafletjs.com/">Leaflet</a>. The results and maps on this page are under the license below.</p>
+</div>
+</div>
+<script src="/s2s/leaflet.js" defer></script>
+<script src="/s2s/s2s.js?v=5" defer></script>
+</article>
+  </main>
+  <footer class="site">
+    © 2026 G Blaj · <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+  </footer>
+</body>
+</html>

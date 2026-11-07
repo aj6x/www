@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aj6x.com/sitemap.xml
