@@ -27,6 +27,14 @@
   const byRef = new Map(summits.map(s => [s.ref, s]));
   const davidson = byRef.get('W6/NC-423');
   let opening = [davidson.lat, davidson.lon];
+  let start = 0;
+  const starts = index.sizes.map(n => (start += n) - n);      // the summits' records, one after another in the pack, in the order of the index
+  async function record(s) {       // one summit's links: a byte range of the pack, compressed on its own
+    const at = starts[s.i], end = at + index.sizes[s.i];
+    const r = await fetch(`/s2s/${index.pack}`, { headers: { Range: `bytes=${at}-${end - 1}` } });
+    const bytes = r.status === 206 ? await r.blob() : (await r.blob()).slice(at, end);      // a server without ranges sends it all
+    return new Response(bytes.stream().pipeThrough(new DecompressionStream('deflate-raw'))).json();
+  }
   const bands = index.bands ?? ['2m'];
   const setups = index.setups ?? {};
   const ANY = ['The easiest setup of its band', 'The middle setup', 'The best setup', 'Long shots, the best setup, half of the time', 'Very long shots, the best setup, a tenth of the time'];
@@ -325,7 +333,7 @@
 
   async function show(s) {
     if (!files.has(s.ref)) {
-      const body = await fetch(`/s2s/links/${s.ref.replace('/', '-')}.json`).then(r => r.json());
+      const body = await record(s);
       const [steps, ...letters] = Array.isArray(body[0]) ? body : [null];
       let at = -1;
       files.set(s.ref, steps ? steps.map((step, n) => ({ o: summits[at += step], letters: letters.map(l => l[n]).join('') }))
