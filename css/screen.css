@@ -122,6 +122,8 @@ a:hover { color: var(--text); }
 :is(h1, h2, h3) a:hover { color: var(--text); }
 
 :focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.skip { position: absolute; top: .5rem; left: .5rem; z-index: 10; padding: .4em .8em; color: var(--text); background: var(--bg); border-radius: 3px; transform: translateY(-200%); }
+.skip:focus { transform: none; }
 
 li::marker { color: var(--accent); }
 

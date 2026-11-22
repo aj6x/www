@@ -155,7 +155,7 @@ figcaption {
 
 .banner.cropped img { aspect-ratio: auto; }
 
-iframe, .pager, .more, aside.note { display: none; }
+iframe, .skip, .pager, .more, aside.note { display: none; }
 
 /* summit articles: the profile prints (vector); the QSO logs don't, the sheets carry the totals */
 .profile { margin: 0.15in 0 0; break-inside: avoid; page-break-inside: avoid; }
