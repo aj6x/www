@@ -39,7 +39,7 @@ article > #s2s.s2sapp { max-width: var(--measure); margin-inline: auto; }
 .s2skey .dot { display: inline-block; width: .7em; height: .7em; margin-right: .35em; border-radius: 50%; }
 article:has(.s2sapp) .banner { display: none; }   /* the map comes first here */
 #s2s-map .leaflet-bar a { color: #005674; }
-#s2s-map.s2s-full { position: fixed !important; inset: 0; z-index: 1000; height: 100%; margin: 0; }
+#s2s-map.s2s-full { position: fixed !important; inset: 0; z-index: 1000; height: 100%; margin: 0; }   /* !important: Leaflet sets an inline position on the map */
 html.s2s-locked { overflow: hidden; }
 #s2s-map .s2s-fullbutton { display: flex; align-items: center; justify-content: center; }
 .s2s-fullbutton::before { content: ""; width: 14px; height: 14px; box-sizing: border-box; border: 2px solid currentColor; }

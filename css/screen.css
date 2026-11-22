@@ -374,9 +374,10 @@ details.s2s summary { max-width: var(--prose); margin-inline: auto; cursor: poin
 details.s2s summary:hover { color: var(--text); }
 details.s2s p { font-size: var(--small); }
 details.s2s table { width: 100%; font-family: var(--condensed); font-size: var(--small); }
-details.s2s td:not(:first-child), details.s2s th:not(:first-child) { text-align: right; white-space: nowrap; }
+details.s2s :is(td, th):not(:first-child) { text-align: right; }
+details.s2s td:not(:first-child) { white-space: nowrap; }   /* numbers stay on one line; the headings may wrap */
 details.s2s :is(td, th):nth-child(5) { text-align: left; }
-details.s2s th { white-space: normal !important; vertical-align: bottom; }
+details.s2s th { vertical-align: bottom; }
 details.s2s :is(td, th) { padding-inline: .4em; }
 .s2sprofile { margin: 1rem 0; }
 .s2sprofile svg { display: block; width: 100%; height: auto; }
