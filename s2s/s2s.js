@@ -338,7 +338,7 @@
     strip.textContent = 'VHF+ S2S';
     view.clearLayers();
     placed.length = 0;
-    summits.forEach(s => view.addLayer(dot(s, '#96d1aa', 2.5, .5)));
+    summits.forEach(s => view.addLayer(dot(s, '#4f5f68', 2.5, .5)));
     legend.replaceChildren(el('li', {}, el('span', { className: 'dot summit' }), `Summits with 10+ activations: ${summits.length.toLocaleString()}`));
     if (spot) map.panTo(spot);
     else map.setView(opening, 7);
