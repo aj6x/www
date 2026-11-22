@@ -194,8 +194,8 @@ figure.aerial :is(.land, .zone) { display: inline-block; width: 1.5em; height: 0
 figure.aerial .land.public { box-shadow: inset 0 0 0 2px rgb(191 230 242 / 0.6); }
 figure.aerial .land.closed { background: repeating-linear-gradient(45deg, #e31f26 0 1.5px, #4d5d3a 1.5px 5px); }
 figure.aerial .land.easement { box-shadow: inset 0 0 0 1px #e6f7fc; }
-figure.aerial .zone.access { background: #a8834d; box-shadow: inset 0 0 0 1.5px #f3a257; }
-figure.aerial .zone.other { box-shadow: inset 0 0 0 1.5px #f3a257; }
+figure.aerial .zone { box-shadow: inset 0 0 0 1.5px #f3a257; }
+figure.aerial svg.ramp { display: inline-block; width: 5.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; }   /* the RFI bands (zonerfi.py) */
 
 /* QSO map: a page of its own with its heading, the full text width round */
 h2#qso-map { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; }
