@@ -59,7 +59,7 @@ html.s2s-locked { overflow: hidden; }
 .s2s-legend li { padding-block: .15em; }
 .s2s-legend input { flex: none; margin: 0; accent-color: var(--accent); }
 .s2s-legend .dot { flex: none; margin: 0; box-shadow: 0 0 0 1px color-mix(in oklab, var(--text) 45%, var(--bg)); }
-.s2s-legend .dot.summit { background: #4f5f68; }   /* gray: summits not on the scale until one is picked */
+.s2s-legend .dot.summit { background: #d4d9dc; }   /* gray: summits not on the scale until one is picked */
 .s2s-legend .s2s-here { flex: none; align-self: center; }
 .s2s-legend .s2s-here svg { width: 1em; height: auto; }
 @media (pointer: coarse) {
