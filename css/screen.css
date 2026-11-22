@@ -625,9 +625,9 @@ html[data-at="night"] .lost { --sky-top: #041c2b; --sky-low: #0b3e57; --far: #12
 .lost-spark { position: absolute; width: 6%; translate: -50% -50%; pointer-events: none; opacity: 0;
   animation: lost-sparkle 6.4s ease-in-out infinite; }
 .lost-spark img { display: block; width: 100%; height: auto; }
-.lost-spark-big { left: 47.55%; top: 38.3%; width: 9%; }
-.lost-spark-left { left: 34.6%; top: 50.2%; animation-delay: 0.35s; }
-.lost-spark-right { left: 58.4%; top: 50.7%; animation-delay: 0.7s; }
+.lost-spark-big { left: 49.05%; top: 40.1%; width: 9%; }
+.lost-spark-left { left: 32.6%; top: 51.6%; animation-delay: 0.35s; }
+.lost-spark-right { left: 59.9%; top: 50.7%; animation-delay: 0.7s; }
 .lost > header { text-align: center; }
 .lost > header h1 { margin-top: 0.25em; }
 .lost-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1.5rem; margin-block: 1.5rem 2rem;
