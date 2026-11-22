@@ -565,3 +565,92 @@ figure.cellmap .key .weak { background: #1a667c; }
 
 /* the GoatCounter pixel (build.py counter): no room on the page */
 img.count { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+/* The 404 page (templates/404.html): one inline SVG scene in the site's colors, three goats calling CQ from a summit
+   with a radio and two antennas, then the ways back. The sky follows the reader's clock (LOST_CLOCK in build.py sets
+   html[data-at]); without the script it is day, or night in dark mode. The goats' eyes sparkle, in HDR where the
+   screen has it (QRPika's sprite); the sparkles and signal rings rest when the reader asks for less motion. */
+.lost {
+  --sky-top: #2f8fae; --sky-low: #cdebdd; --far: #3f8fa8; --mid: #1b8790; --near: var(--benzol-green);
+  --snow: var(--text); --sun: #fff6c8; --cloud: #fffaf0; --star: 0; --sun-y: 0; --moon: 0; --sunshow: 1;
+  max-width: var(--measure); margin-inline: auto;
+}
+html[data-at="sunrise"] .lost { --sky-top: #2f5a96; --sky-low: #ffcf9a; --far: #4e6f9a; --mid: #2f7489; --near: #1f8a80;
+  --sun: #ffd49a; --cloud: #ffe4cf; --star: 0.3; --sun-y: 120px; }
+html[data-at="sunset"] .lost { --sky-top: #2a1d50; --sky-low: #f3a257; --far: #5a4f7d; --mid: #3a5f7a; --near: #18766e;
+  --sun: #ffb36b; --cloud: #f7c6a3; --star: 0.5; --sun-y: 130px; }
+html[data-at="night"] .lost { --sky-top: #041c2b; --sky-low: #0b3e57; --far: #123f57; --mid: #0d4a55; --near: #0d5d58;
+  --snow: #b9cfd6; --cloud: #3d5f70; --star: 1; --moon: 1; --sunshow: 0; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-at]) .lost { --sky-top: #041c2b; --sky-low: #0b3e57; --far: #123f57; --mid: #0d4a55; --near: #0d5d58;
+    --snow: #b9cfd6; --cloud: #3d5f70; --star: 1; --moon: 1; --sunshow: 0; }
+}
+.lost-stage { position: relative; margin-block: 1rem 0.5rem; }
+.lost-scene { display: block; width: 100%; height: auto; border-radius: 0.5rem; }
+.lost-sky-top { stop-color: var(--sky-top); }
+.lost-sky-low { stop-color: var(--sky-low); }
+/* the sky rect takes its gradient as an attribute: in a stylesheet, url(#…) would point into the stylesheet */
+.lost-stars circle { fill: var(--text); opacity: var(--star); animation: lost-twinkle 5s ease-in-out infinite; }
+.lost-stars circle:nth-child(2n) { animation-delay: 1.7s; }
+.lost-stars circle:nth-child(3n) { animation-delay: 3.1s; }
+.lost-sun { fill: var(--sun); opacity: var(--sunshow); transform: translateY(var(--sun-y)); }
+.lost-moon { opacity: var(--moon); }
+.lost-moon circle { fill: #fff3c4; }
+.lost-moon .lost-moon-cut { fill: var(--sky-top); }
+.lost-cloud { fill: var(--cloud); opacity: 0.9; }
+.lost-ink { fill: none; stroke: var(--text); stroke-width: 26; stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 7px 0 #003c51); }
+.lost-rings circle { fill: none; stroke: var(--route); stroke-width: 13; }
+.lost-far { fill: var(--far); }
+.lost-snow { fill: var(--snow); opacity: 0.85; }
+.lost-mid { fill: var(--mid); }
+.lost-near { fill: var(--near); }
+.lost-contours path { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0.45; }
+.lost-zone { fill: none; stroke: var(--route); stroke-width: 3; stroke-dasharray: 10 8; }
+.lost-mast, .lost-yagi { fill: none; stroke: #003c51; stroke-width: 5; stroke-linecap: round; }
+.lost-yagi { stroke-width: 4; }
+.lost-wire { fill: none; stroke: #003c51; stroke-width: 2.5; }
+.lost-rock { fill: #3a5560; }
+.lost-radio { fill: #1d2a30; }
+.lost-display { fill: #3a2a10; }
+.lost-bars { fill: none; stroke: var(--route); stroke-width: 2.5; }
+.lost-knob { fill: #55707a; }
+.lost-waves circle { fill: none; stroke: var(--route); stroke-width: 4; transform-box: fill-box; transform-origin: center;
+  animation: lost-call 3.6s ease-out infinite; opacity: 0; }
+.lost-waves circle:nth-child(2) { animation-delay: 1.2s; }
+.lost-waves circle:nth-child(3) { animation-delay: 2.4s; }
+.lost-goats path { fill: var(--text); stroke: #003c51; stroke-width: 6; stroke-linejoin: round; paint-order: stroke; }
+.lost-goats path:first-child { stroke-width: 14; }
+.lost-eyes circle { fill: #1d2a30; }
+.lost-spark { position: absolute; width: 6%; translate: -50% -50%; pointer-events: none; opacity: 0;
+  animation: lost-sparkle 6.4s ease-in-out infinite; }
+.lost-spark img { display: block; width: 100%; height: auto; }
+.lost-spark-big { left: 47.55%; top: 38.3%; width: 9%; }
+.lost-spark-left { left: 34.6%; top: 50.2%; animation-delay: 0.35s; }
+.lost-spark-right { left: 58.4%; top: 50.7%; animation-delay: 0.7s; }
+.lost > header { text-align: center; }
+.lost > header h1 { margin-top: 0.25em; }
+.lost-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 1.5rem; margin-block: 1.5rem 2rem;
+  font-family: var(--condensed); font-size: var(--h3); }
+@keyframes lost-call {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(5); opacity: 0; }
+}
+@keyframes lost-twinkle {
+  0%, 100% { opacity: calc(var(--star) * 0.3); }
+  50% { opacity: var(--star); }
+}
+@keyframes lost-sparkle {
+  0%, 58%, 100% { opacity: 0; transform: scale(0.25) rotate(-16deg); }
+  68% { opacity: 1; transform: scale(1) rotate(0); }
+  73% { opacity: 0.75; transform: scale(0.78) rotate(4deg); }
+  78% { opacity: 1; transform: scale(0.92) rotate(7deg); }
+  90% { opacity: 0; transform: scale(0.35) rotate(18deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lost-stars circle, .lost-waves circle { animation: none; }
+  .lost-spark { display: none; }
+  .lost-waves circle:nth-child(1) { opacity: 0.8; transform: scale(2); }
+  .lost-waves circle:nth-child(2) { opacity: 0.5; transform: scale(3.2); }
+  .lost-waves circle:nth-child(3) { opacity: 0.25; transform: scale(4.4); }
+}
