@@ -122,6 +122,28 @@
         <li><strong>QSO maps:</strong> the earth from NASA&rsquo;s Blue Marble, borders from Natural Earth, summits from the SOTA summits list, spots and skimmers&rsquo; grid squares from the <a href="https://www.reversebeacon.net">Reverse Beacon Network</a>. The only data that isn&rsquo;t open: where each station is, from QRZ.com (where most operators set their own station location, and the rest are placed by their licence address), rounded to the middle of its grid square (about 5 by 4 km), so no map points at anyone&rsquo;s home.</li>
       </ul>
       <p>Each map credits its sources in its caption. The maps are shared under the same licence as everything else on this site, <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. In plain words: you&rsquo;re welcome to copy, print and pass them on, as long as you credit AJ6X, don&rsquo;t sell them or use them commercially, and share them as they are, not changed or made into something new. For anything beyond that, just ask. The data they are made from keeps its own licence (OpenStreetMap&rsquo;s is the <a href="https://opendatacommons.org/licenses/odbl/">ODbL</a>), so you can always go to the sources and make your own.</p>
+      <h2 id="made">How this site is made</h2>
+      <p>By hand, mostly. I write the articles in Markdown, and a Python script of our own turns them into plain HTML and CSS: no framework, no content management system, and nothing loaded from elsewhere but the page counter (see <a href="#privacy">Privacy</a>). The only code that isn&rsquo;t ours is <a href="https://leafletjs.com/">Leaflet</a>, for the S2S map, served from here too. The articles work with JavaScript off; the few lines of script on some pages only add to them (photos switching to their print versions, the long S2S tables loading when you open them, the sky on the 404 page). View Source is welcome: the HTML is indented and tidy, and the build won&rsquo;t publish a page that isn&rsquo;t. The site is hosted on GitHub Pages.</p>
+      <h3 id="photos">Photos</h3>
+      <p>Ours, end to end: taken on our phones on the trail, and developed by our own pipeline, not a photo editor. It starts from Apple&rsquo;s own rendering of each photo, RAW or HEIC, with the white balance as shot, and changes only tone and colour: nothing added, nothing removed. Frames taken minutes apart, say a RAW next to an HEIC, are matched so they look like the same moment.</p>
+      <p>Every photo is graded twice, once for HDR screens and once for everything else, because one grade squeezed into both looks flat in SDR. The two agree: the land, the shade and the midtones are the same in both, and only the light (sky, sun, glints on water) gets the extra brightness of an HDR screen. Your browser picks the version: a 10-bit HDR AVIF on HDR screens, an SDR AVIF elsewhere (and on paper), and a small JPEG for browsers without AVIF.</p>
+      <figure class="hdr-sample">
+        <div class="hdr-pair">
+          <picture>
+            <source srcset="/img/hdr-sample/sdr.avif" type="image/avif">
+            <img src="/img/hdr-sample/sdr.jpg" alt="Bright white clouds over the stone wall at the top of the stairs from the Bear Gulch Caves, in SDR" width="600" height="450">
+          </picture>
+          <picture>
+            <source media="screen and (dynamic-range: high)" srcset="/img/hdr-sample/hdr.avif" type="image/avif">
+            <source srcset="/img/hdr-sample/sdr.avif" type="image/avif">
+            <img src="/img/hdr-sample/sdr.jpg" alt="The same photo in HDR, where the screen can show it" width="600" height="450">
+          </picture>
+          <span>SDR</span>
+          <span>HDR</span>
+        </div>
+        <figcaption><span class="on-hdr">Your screen shows HDR: the clouds on the right are brighter, the rock and the shade are the same in both.</span><span class="on-sdr">Your screen shows SDR, so the two look the same, as they should: on an HDR screen, the clouds on the right are brighter.</span> The stairs from the Bear Gulch Caves, Pinnacles, 2023.</figcaption>
+      </figure>
+
       <h2 id="privacy">Privacy</h2>
       <p>No ads, no cookies, nothing that follows you around. To know roughly how many people read this site, each page loads one tiny image from <a href="https://www.goatcounter.com">GoatCounter</a>, a small, open source counter: it counts the page view, and that&rsquo;s it. No JavaScript, and no personal data kept.</p>
       <h2 id="links">Links</h2>
@@ -136,7 +158,7 @@
     </article>
   </main>
   <footer class="site">
-    © 2026 G Blaj · <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+    © 2026 G Blaj · <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a> · <a href="/about/#made">Made by hand</a>
   </footer>
   <img class="count" src="https://aj6x.goatcounter.com/count?p=%2Fabout%2F&amp;t=About" alt="" width="1" height="1" referrerpolicy="no-referrer-when-downgrade">
 </body>

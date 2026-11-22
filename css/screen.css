@@ -180,6 +180,15 @@ figure.photo img { max-height: 70vh; max-height: 70svh; object-fit: contain; }
 /* a panorama (2:1 or wider) takes the full column, like the maps: it's short enough anyway */
 figure.photo.wide { max-width: none; }
 
+/* About: the same photo in SDR and HDR, side by side; the caption says what this screen shows */
+figure.hdr-sample { max-width: var(--prose); margin-inline: auto; }
+.hdr-pair { display: grid; grid-template-columns: 1fr 1fr; gap: .25rem .5rem; font-family: var(--condensed); font-size: var(--small); color: var(--accent); text-align: center; }
+.hdr-sample .on-hdr { display: none; }
+@media (dynamic-range: high) {
+  .hdr-sample .on-hdr { display: inline; }
+  .hdr-sample .on-sdr { display: none; }
+}
+
 /* QSO map: the earth and the overlays stacked, clipped round; round leaves the corners empty, so
    it may fill the window's height (photos stop at 70%): scrolled to, it's all map */
 figure.qsomap .disk { display: grid; width: min(100%, 92vh); width: min(100%, 92svh); margin: 0 auto; }
