@@ -133,14 +133,17 @@ figure img {
 .row figure { flex: var(--aspect, 1) 1 0; min-width: 0; margin: 0; }
 .row figure img { max-height: none; }
 
-/* the summit map starts a page, with its heading, at the full text width (6.72 × 6.8 in: its own frame,
-   taller than the screen map's 4:3); caption under it, and the elevation profile after it, a route sheet
-   on one page. page-break-* too: WebKit (Safari) paginates with those. A heading that starts a page
-   keeps no space above it (WebKit keeps it after a forced break) */
-h2#map { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; }
-:is(h2#map, h2#aerial, h2#qso-map) { margin-top: 0; }
-figure.map { break-inside: avoid; page-break-inside: avoid; margin: 0; }
-figure.map img.print-only { display: block; width: 6.72in; height: auto; max-height: none; margin: 0 auto; }   /* inches, not %: the same on any layout width; height from width and height */
+/* the hiking map: the full sheet (map-full.svg, a letter page with its own title, key and credits) on a page of its
+   own with half-inch margins, so it prints at its own size; a sheet wider than tall gets a page turned sideways. Chrome
+   follows the named pages; Safari keeps the page upright and the sheet shrinks to its width. The heading and the
+   caption are the sheet's own. page-break-*: WebKit paginates with those. */
+@page sheet { size: letter portrait; margin: 0.5in; }
+@page sheet-wide { size: letter landscape; margin: 0.5in; }
+h2#map, figure.map figcaption { display: none; }
+figure.map { page: sheet; break-before: page; page-break-before: always; break-inside: avoid; page-break-inside: avoid; margin: 0; }
+figure.map.wide { page: sheet-wide; }
+figure.map img.sheet { display: block; width: 100%; height: auto; max-height: none; }
+h2#aerial { margin-top: 0; }
 
 figcaption {
   margin-top: 0.05in;
@@ -188,8 +191,8 @@ h2#log, details.log, details.rfi { display: none; }   /* the fact sheet carries 
    its key on a patch of photo green, as on screen */
 h2#aerial { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; }
 figure.aerial { break-inside: avoid; page-break-inside: avoid; margin: 0; }
-figure.aerial .stack { display: grid; width: 6.72in; margin: 0 auto; }
-figure.aerial .stack img { grid-area: 1 / 1; width: 6.72in; height: 6.8in; max-height: none; }   /* the frame of the hiking map's print version */
+figure.aerial .stack { display: grid; width: 3.45in; margin: 0 auto; }
+figure.aerial .stack img { grid-area: 1 / 1; width: 3.45in; height: 3.5in; max-height: none; }   /* the hiking map's print frame (6.72 × 6.8 in), at half size: half a page, with the QSO map under it */
 figure.aerial :is(.land, .zone) { display: inline-block; width: 1.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; background: #4d5d3a; box-shadow: none; outline: none; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 figure.aerial .land.public { box-shadow: inset 0 0 0 2px rgb(191 230 242 / 0.6); }
 figure.aerial .land.closed { background: repeating-linear-gradient(45deg, #e31f26 0 1.5px, #4d5d3a 1.5px 5px); }
@@ -198,10 +201,13 @@ figure.aerial .zone { box-shadow: inset 0 0 0 1.5px #f3a257; }
 figure.aerial svg.ramp { display: inline-block; width: 5.5em; height: 0.75em; margin-right: 0.3em; vertical-align: middle; }   /* the RFI bands (zonerfi.py) */
 
 /* QSO map: a page of its own with its heading, the full text width round */
-h2#qso-map { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; }
-figure.qsomap .disk { display: grid; width: 6.72in; margin: 0 auto; }
-figure.qsomap .disk img { grid-area: 1 / 1; width: 6.72in; height: 6.72in; max-height: none; clip-path: circle(50%); }
-figure.qsomap .disk svg { grid-area: 1 / 1; width: 6.72in; height: 6.72in; position: relative; z-index: 1; }   /* above the clipped (so stacked) images */
+/* QSO map: under the aerial photo, half a page; a page of its own only when there's no aerial photo */
+h2#qso-map { break-before: auto; page-break-before: auto; break-after: avoid; page-break-after: avoid; margin-top: 0.2in; }
+h2#map ~ h2#qso-map:not(h2#aerial ~ *) { break-before: page; page-break-before: always; margin-top: 0; }
+figure.qsomap { margin: 0; }   /* no break-inside: avoid here: Chrome then over-measures it and starts a new page; the disk (a grid) stays whole anyway */
+figure.qsomap .disk { display: grid; width: 3.5in; margin: 0 auto; }
+figure.qsomap .disk img { grid-area: 1 / 1; width: 3.5in; height: 3.5in; max-height: none; clip-path: circle(50%); }
+figure.qsomap .disk svg { grid-area: 1 / 1; width: 3.5in; height: 3.5in; position: relative; z-index: 1; }   /* above the clipped (so stacked) images */
 figure.qsomap .tip { display: none; }
 figcaption .key { white-space: nowrap; margin-right: 0.6em; }
 figcaption .keys { display: block; margin-bottom: 0.2em; }
@@ -286,7 +292,7 @@ figure.banner { margin: 0; }
 h2#s2s { break-before: page; page-break-before: always; break-after: avoid; page-break-after: avoid; margin-top: 0; }
 details.s2s { display: none; }
 figure.s2smap { break-inside: avoid; page-break-inside: avoid; margin: 0; }
-figure.s2smap .stack { display: grid; width: 6.72in; height: calc(6.72in / var(--paper)); margin: 0 auto; overflow: hidden; }
+figure.s2smap .stack { display: grid; width: 4in; height: calc(4in / var(--paper)); margin: 0 auto; overflow: hidden; }   /* two thirds: the map and its groups on one page */
 figure.s2smap .stack > :not(.screen-only) { display: block; grid-area: 1 / 1; width: 100%; height: 100%; max-width: none; max-height: none; }
 figure.s2smap .stack > svg:not(.screen-only) { width: calc(var(--span) * 100%); margin-left: calc(var(--left) * 100%); }
 figure.s2smap, .s2s .dot { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
@@ -310,3 +316,12 @@ ul.s2s { list-style: none; padding: 0; break-inside: avoid; page-break-inside: a
 h2#cell, figure.cellmap { display: none; }
 
 img.count { display: none; }
+
+/* the maps' long captions, as numbered notes after the story (build.py: print_notes); a caption keeps its key and
+   the note's number, so the maps keep their size */
+.note-ref { white-space: nowrap; }
+section.notes { margin-top: 0.3in; font-size: var(--small); line-height: 1.35; break-before: avoid; }
+section.notes h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 0.06in; }
+section.notes ol { margin: 0; padding-left: 1.4em; }
+section.notes li { margin-bottom: 0.05in; }
+
