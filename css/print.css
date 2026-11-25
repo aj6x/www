@@ -134,14 +134,11 @@ figure img {
 .row figure img { max-height: none; }
 
 /* the hiking map: the full sheet (map-full.svg, a letter page with its own title, key and credits) on a page of its
-   own with half-inch margins, so it prints at its own size; a sheet wider than tall gets a page turned sideways. Chrome
-   follows the named pages; Safari keeps the page upright and the sheet shrinks to its width. The heading and the
-   caption are the sheet's own. page-break-*: WebKit paginates with those. */
+   own with half-inch margins, so it prints at its own size. A sheet wider than tall comes turned a quarter turn
+   from summit.py, so every sheet is upright. Safari keeps its own page margins, so there the sheet is a little smaller. The heading and the caption are the sheet's own. page-break-*: WebKit paginates with those. */
 @page sheet { size: letter portrait; margin: 0.5in; }
-@page sheet-wide { size: letter landscape; margin: 0.5in; }
 h2#map, figure.map figcaption { display: none; }
 figure.map { page: sheet; break-before: page; page-break-before: always; break-inside: avoid; page-break-inside: avoid; margin: 0; }
-figure.map.wide { page: sheet-wide; }
 figure.map img.sheet { display: block; width: 100%; height: auto; max-height: none; }
 h2#aerial { margin-top: 0; }
 
