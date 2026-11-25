@@ -60,6 +60,12 @@ h1, h2, h3, h4 {
   page-break-after: avoid;
 }
 
+/* keep with next, for Safari too: WebKit ignores break-after: avoid, so each heading carries an inch of room that
+   cannot be split from it; with less than that left on the page, the heading moves over. The negative margin gives
+   the inch back, so the spacing on the page stays the same */
+h2, h3 { break-inside: avoid; page-break-inside: avoid; }
+h2::after, h3::after { content: ""; display: block; height: 1in; margin-bottom: -1in; }
+
 h1 { font-size: 22pt; margin: 0.15in 0 0.05in; }
 h2 { font-size: 17pt; margin: 0.25in 0 0.06in; }
 h3 { font-size: 14pt; margin: 0.2in 0 0.05in; }
