@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2016 2016" width="2016" height="2016" class="qsos" font-family='"Roboto Condensed", "Avenir Next Condensed", "Arial Narrow", sans-serif' role="group" aria-label="QSOs">
+<metadata><georef xmlns="https://aj6x.com/ns/georef" crs="+proj=aeqd +lat_0=39.342700 +lon_0=-120.660700" projection="azimuthal equidistant around the summit" centre-x="1008" centre-y="1008" radius-px="1008" radius-km="2558" radial-scale="power 0.51"/></metadata>
+<g fill="none" stroke-linecap="round">
+<path d="M1008.0,1008.0L930.7,1101.7" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L937.0,408.7" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1531.0,1438.3" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1616.5,1322.0" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1912.0,1304.5" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1128.9,1468.1" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1364.6,1291.6" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1140.5,1468.4" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1171.8,1479.0" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1018.4,1404.7" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1708.6,1218.9" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1212.4,1465.2" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1226.5,1469.9" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L930.7,1101.7" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L937.0,408.7" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1531.0,1438.3" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1616.5,1322.0" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1912.0,1304.5" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1128.9,1468.1" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1364.6,1291.6" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1140.5,1468.4" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1171.8,1479.0" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1018.4,1404.7" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1708.6,1218.9" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1212.4,1465.2" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1226.5,1469.9" stroke="#5959ff" stroke-width="3.8"/>
+</g>
+<circle cx="841.2" cy="1270.6" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="841.2" cy="1270.6" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="1491.1" cy="1174.0" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1491.1" cy="1174.0" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="1537.0" cy="885.2" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1537.0" cy="885.2" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="1524.7" cy="846.1" r="8.2" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8.2"/>
+<circle cx="1524.7" cy="846.1" r="8.2" fill="none" stroke="#5959ff" stroke-width="4.1"/>
+<circle cx="930.7" cy="1101.7" r="16.4" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="937.0" cy="408.7" r="16.4" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1531.0" cy="1438.3" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1616.5" cy="1322.0" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1912.0" cy="1304.5" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1128.9" cy="1468.1" r="16.4" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1364.6" cy="1291.6" r="14.8" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1140.5" cy="1468.4" r="14.8" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1171.8" cy="1479.0" r="16.4" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1018.4" cy="1404.7" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1708.6" cy="1218.9" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1212.4" cy="1465.2" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1226.5" cy="1469.9" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1008.0" cy="1008.0" r="23.6" fill="#ff1493" stroke="#001018" stroke-width="3.1"/>
+<path d="M1008.0,991.0l16.4,28.3h-32.9z" fill="#ffffff" stroke="#001018" stroke-width="3.8" stroke-linejoin="round"/>
+<circle class="hit" cx="1008.0" cy="1008.0" r="29.9" fill="transparent" tabindex="0" aria-label="On the summit with us:; AJ6X ↔ W7DLZ · 2m FM"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1044.2" y="955.6" width="406.3" height="104.9" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1056.8" y="997.6">On the summit with us:</text><text x="1056.8" y="1042.7">AJ6X ↔ W7DLZ · 2m FM</text></g>
+<circle class="hit" cx="841.2" cy="1270.6" r="12.6" fill="transparent" tabindex="0" aria-label="W6YX heard AJ6X · 40m CW · 6 dB · 15 wpm · 20:27Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="860.1" y="1240.7" width="874.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="872.7" y="1282.7">W6YX heard AJ6X · 40m CW · 6 dB · 15 wpm · 20:27Z</text></g>
+<circle class="hit" cx="1491.1" cy="1174.0" r="12.6" fill="transparent" tabindex="0" aria-label="WA7LNW heard AJ6X · 40m CW · 17 dB · 15 wpm · 00:01Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="546.1" y="1144.1" width="926.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="558.7" y="1186.1">WA7LNW heard AJ6X · 40m CW · 17 dB · 15 wpm · 00:01Z</text></g>
+<circle class="hit" cx="1537.0" cy="885.2" r="12.6" fill="transparent" tabindex="0" aria-label="K7CO heard AJ6X · 40m CW · 22 dB · 15 wpm · 00:01Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="626.7" y="855.3" width="891.5" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="639.3" y="897.3">K7CO heard AJ6X · 40m CW · 22 dB · 15 wpm · 00:01Z</text></g>
+<circle class="hit" cx="1524.7" cy="846.1" r="12.6" fill="transparent" tabindex="0" aria-label="NG7M heard AJ6X · 40m CW · 14 dB · 15 wpm · 00:01Z"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="614.3" y="816.2" width="891.5" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="626.9" y="858.2">NG7M heard AJ6X · 40m CW · 14 dB · 15 wpm · 00:01Z</text></g>
+<circle class="hit" cx="930.7" cy="1101.7" r="22.7" fill="transparent" tabindex="0" aria-label="WB6POT · 10m CW; WB6POT · 20m CW; WB6POT · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="959.6" y="1026.7" width="285.1" height="149.9" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="972.2" y="1068.7">WB6POT · 10m CW</text><text x="972.2" y="1113.8">WB6POT · 20m CW</text><text x="972.2" y="1158.8">WB6POT · 40m CW</text></g>
+<circle class="hit" cx="937.0" cy="408.7" r="22.7" fill="transparent" tabindex="0" aria-label="WW7D · 20m CW; WW7D · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="966.0" y="356.3" width="250.4" height="104.9" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="978.6" y="398.3">WW7D · 20m CW</text><text x="978.6" y="443.4">WW7D · 40m CW</text></g>
+<circle class="hit" cx="1531.0" cy="1438.3" r="22.1" fill="transparent" tabindex="0" aria-label="K6HPX · 20m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1234.9" y="1408.4" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1247.5" y="1450.4">K6HPX · 20m CW</text></g>
+<circle class="hit" cx="1616.5" cy="1322.0" r="22.1" fill="transparent" tabindex="0" aria-label="AA7OY · 20m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1320.4" y="1292.0" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1333.0" y="1334.1">AA7OY · 20m CW</text></g>
+<circle class="hit" cx="1912.0" cy="1304.5" r="22.1" fill="transparent" tabindex="0" aria-label="AK5SD · 20m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1615.9" y="1274.6" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1628.5" y="1316.7">AK5SD · 20m CW</text></g>
+<circle class="hit" cx="1128.9" cy="1468.1" r="22.7" fill="transparent" tabindex="0" aria-label="K6CPR · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="832.1" y="1438.1" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="844.7" y="1480.2">K6CPR · 40m CW</text></g>
+<circle class="hit" cx="1364.6" cy="1291.6" r="22.1" fill="transparent" tabindex="0" aria-label="W4WJK · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1068.5" y="1261.6" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1081.1" y="1303.7">W4WJK · 40m CW</text></g>
+<circle class="hit" cx="1140.5" cy="1468.4" r="22.1" fill="transparent" tabindex="0" aria-label="KK6WT · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="844.4" y="1438.5" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="857.0" y="1480.5">KK6WT · 40m CW</text></g>
+<circle class="hit" cx="1171.8" cy="1479.0" r="22.7" fill="transparent" tabindex="0" aria-label="NT6E · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="892.4" y="1449.1" width="250.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="905.0" y="1491.1">NT6E · 40m CW</text></g>
+<circle class="hit" cx="1018.4" cy="1404.7" r="22.1" fill="transparent" tabindex="0" aria-label="WB6JWB · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="705.0" y="1374.8" width="285.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="717.6" y="1416.8">WB6JWB · 40m CW</text></g>
+<circle class="hit" cx="1708.6" cy="1218.9" r="22.1" fill="transparent" tabindex="0" aria-label="K5DEZ · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1412.5" y="1189.0" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1425.1" y="1231.0">K5DEZ · 40m CW</text></g>
+<circle class="hit" cx="1212.4" cy="1465.2" r="22.1" fill="transparent" tabindex="0" aria-label="N6EK · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="933.7" y="1435.2" width="250.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="946.3" y="1477.3">N6EK · 40m CW</text></g>
+<circle class="hit" cx="1226.5" cy="1469.9" r="22.1" fill="transparent" tabindex="0" aria-label="KO6TX · 40m CW"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="930.4" y="1440.0" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="943.0" y="1482.0">KO6TX · 40m CW</text></g>
+</svg>

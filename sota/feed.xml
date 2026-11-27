@@ -5,9 +5,19 @@
   <link rel="self" type="application/atom+xml" href="https://aj6x.com/sota/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://aj6x.com/sota/"/>
   <id>https://aj6x.com/sota/feed.xml</id>
-  <updated>2026-11-24T00:00:00Z</updated>
+  <updated>2026-11-27T00:00:00Z</updated>
   <author><name>AJ6X</name><uri>https://aj6x.com/</uri></author>
   <icon>https://aj6x.com/favicon.svg</icon>
+  <entry>
+    <title>Clyde Mountain W6/NS-296</title>
+    <link rel="alternate" type="text/html" href="https://aj6x.com/w6-ns-296/"/>
+    <id>https://aj6x.com/w6-ns-296/</id>
+    <published>2026-11-27T00:00:00Z</published>
+    <updated>2026-11-27T00:00:00Z</updated>
+    <category term="sota" label="SOTA"/>
+    <summary>A steep bushwhack off Bowman Lake Road with our friend Derek W7DLZ: old jeep trails that lead nowhere, manzanita to swim through, and 10m for the 2024 challenge.</summary>
+    <rights>© 2026 G Blaj · CC BY-NC-ND 4.0</rights>
+  </entry>
   <entry>
     <title>Mount Houghton W7N/WC-002</title>
     <link rel="alternate" type="text/html" href="https://aj6x.com/w7n-wc-002/"/>
