@@ -4,9 +4,19 @@
   <link rel="self" type="application/atom+xml" href="https://aj6x.com/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://aj6x.com/"/>
   <id>https://aj6x.com/feed.xml</id>
-  <updated>2026-11-27T00:00:00Z</updated>
+  <updated>2026-11-28T00:00:00Z</updated>
   <author><name>AJ6X</name><uri>https://aj6x.com/</uri></author>
   <icon>https://aj6x.com/favicon.svg</icon>
+  <entry>
+    <title>Mount Rose W7N/WC-001</title>
+    <link rel="alternate" type="text/html" href="https://aj6x.com/w7n-wc-001/"/>
+    <id>https://aj6x.com/w7n-wc-001/</id>
+    <published>2026-11-28T00:00:00Z</published>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <category term="sota" label="SOTA"/>
+    <summary>The highest summit above Lake Tahoe&#x27;s north shore: a popular trail past a waterfall, a long summit ridge, and three activators on top the same morning, which is how I met Derek W7DLZ and David K7DMJ.</summary>
+    <rights>© 2026 G Blaj · CC BY-NC-ND 4.0</rights>
+  </entry>
   <entry>
     <title>Tamarack Peak W7N/WC-003</title>
     <link rel="alternate" type="text/html" href="https://aj6x.com/w7n-wc-003/"/>
