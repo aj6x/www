@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2016 2016" width="2016" height="2016" class="qsos" font-family='"Roboto Condensed", "Avenir Next Condensed", "Arial Narrow", sans-serif' role="group" aria-label="QSOs">
+<metadata><georef xmlns="https://aj6x.com/ns/georef" crs="+proj=aeqd +lat_0=39.312800 +lon_0=-119.884400" projection="azimuthal equidistant around the summit" centre-x="1008" centre-y="1008" radius-px="1008" radius-km="4569" radial-scale="power 0.44"/></metadata>
+<g fill="none" stroke-linecap="round">
+<path d="M1008.0,1008.0L1399.5,1333.0" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1410.8,1374.3" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1731.2,1033.7" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1395.4,1330.3" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1701.2,1248.0" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L918.5,511.3" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1700.8,1253.5" stroke="#001018" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L826.7,1261.2" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L912.6,509.6" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L830.7,1060.2" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L815.1,1101.8" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L116.6,1361.6" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L819.0,1214.7" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1010.5,880.4" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L1102.1,1416.4" stroke="#ffffff" stroke-opacity="0.6" stroke-width="8.8"/>
+<path d="M1008.0,1008.0L967.2,1000.2" stroke="#001018" stroke-opacity="0.6" stroke-width="10.1"/>
+<path d="M1008.0,1008.0L1429.2,1269.9" stroke="#ffffff" stroke-opacity="0.6" stroke-width="10.1"/>
+<path d="M1008.0,1008.0L1399.5,1333.0" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1410.8,1374.3" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1731.2,1033.7" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1395.4,1330.3" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1701.2,1248.0" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L918.5,511.3" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1700.8,1253.5" stroke="#f2c40c" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L826.7,1261.2" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L912.6,509.6" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L830.7,1060.2" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L815.1,1101.8" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L116.6,1361.6" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L819.0,1214.7" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1010.5,880.4" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L1102.1,1416.4" stroke="#5959ff" stroke-width="3.8"/>
+<path d="M1008.0,1008.0L967.2,1000.2" stroke="#f2c40c" stroke-width="5.0"/>
+<path d="M1008.0,1008.0L1429.2,1269.9" stroke="#5959ff" stroke-width="5.0"/>
+</g>
+<circle cx="1399.5" cy="1333.0" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1410.8" cy="1374.3" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1731.2" cy="1033.7" r="14.8" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1395.4" cy="1330.3" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1701.2" cy="1248.0" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="918.5" cy="511.3" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="1700.8" cy="1253.5" r="11.0" fill="#f2c40c" stroke="#001018" stroke-width="3.1"/>
+<circle cx="826.7" cy="1261.2" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="912.6" cy="509.6" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="830.7" cy="1060.2" r="14.8" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="815.1" cy="1101.8" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="116.6" cy="1361.6" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="819.0" cy="1214.7" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1010.5" cy="880.4" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<circle cx="1102.1" cy="1416.4" r="11.0" fill="#5959ff" stroke="#ffffff" stroke-width="3.1"/>
+<path d="M967.2,987.0l12.8,22.1h-25.6z" fill="#f2c40c" stroke="#001018" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M1429.2,1256.7l12.8,22.1h-25.6z" fill="#5959ff" stroke="#ffffff" stroke-width="3.5" stroke-linejoin="round"/>
+<text x="775.0" y="1010.6" font-size="34.6" font-weight="700" fill="#ffffff" stroke="#001018" stroke-opacity="0.75" stroke-linejoin="round" paint-order="stroke" stroke-width="8.2">W7N/WC-003</text>
+<text x="1448.1" y="1280.3" font-size="34.6" font-weight="700" fill="#ffffff" stroke="#001018" stroke-opacity="0.75" stroke-linejoin="round" paint-order="stroke" stroke-width="8.2">W7A/AE-044</text>
+<path d="M1008.0,991.0l16.4,28.3h-32.9z" fill="#ffffff" stroke="#001018" stroke-width="3.8" stroke-linejoin="round"/>
+<circle class="hit" cx="1399.5" cy="1333.0" r="22.1" fill="transparent" tabindex="0" aria-label="W7RV · 20m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1103.4" y="1303.1" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1116.0" y="1345.1">W7RV · 20m SSB</text></g>
+<circle class="hit" cx="1410.8" cy="1374.3" r="22.1" fill="transparent" tabindex="0" aria-label="AF7M · 20m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1114.7" y="1344.4" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1127.3" y="1386.5">AF7M · 20m SSB</text></g>
+<circle class="hit" cx="1731.2" cy="1033.7" r="22.1" fill="transparent" tabindex="0" aria-label="W5ODS · 20m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1417.7" y="1003.8" width="285.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1430.3" y="1045.9">W5ODS · 20m SSB</text></g>
+<circle class="hit" cx="1395.4" cy="1330.3" r="22.1" fill="transparent" tabindex="0" aria-label="WA7JTM · 20m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1064.7" y="1300.3" width="302.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1077.3" y="1342.4">WA7JTM · 20m SSB</text></g>
+<circle class="hit" cx="1701.2" cy="1248.0" r="22.1" fill="transparent" tabindex="0" aria-label="AK5SD · 20m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1387.8" y="1218.1" width="285.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1400.4" y="1260.1">AK5SD · 20m SSB</text></g>
+<circle class="hit" cx="918.5" cy="511.3" r="22.1" fill="transparent" tabindex="0" aria-label="WW7D · 20m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="946.8" y="481.4" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="959.4" y="523.4">WW7D · 20m SSB</text></g>
+<circle class="hit" cx="1700.8" cy="1253.5" r="22.1" fill="transparent" tabindex="0" aria-label="AI5OS · 20m DATA"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="1370.1" y="1223.5" width="302.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1382.7" y="1265.6">AI5OS · 20m DATA</text></g>
+<circle class="hit" cx="826.7" cy="1261.2" r="22.1" fill="transparent" tabindex="0" aria-label="KI6EAB · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="855.1" y="1231.3" width="302.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="867.7" y="1273.3">KI6EAB · 40m SSB</text></g>
+<circle class="hit" cx="912.6" cy="509.6" r="22.1" fill="transparent" tabindex="0" aria-label="WU7H · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="940.9" y="479.7" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="953.5" y="521.8">WU7H · 40m SSB</text></g>
+<circle class="hit" cx="830.7" cy="1060.2" r="22.1" fill="transparent" tabindex="0" aria-label="WB6POT · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="859.1" y="1030.2" width="302.4" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="871.7" y="1072.3">WB6POT · 40m SSB</text></g>
+<circle class="hit" cx="815.1" cy="1101.8" r="22.1" fill="transparent" tabindex="0" aria-label="W6DT · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="843.5" y="1071.9" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="856.1" y="1113.9">W6DT · 40m SSB</text></g>
+<circle class="hit" cx="116.6" cy="1361.6" r="22.1" fill="transparent" tabindex="0" aria-label="W6TDX · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="145.0" y="1331.7" width="285.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="157.6" y="1373.8">W6TDX · 40m SSB</text></g>
+<circle class="hit" cx="819.0" cy="1214.7" r="22.1" fill="transparent" tabindex="0" aria-label="K6KM · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="847.3" y="1184.8" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="859.9" y="1226.8">K6KM · 40m SSB</text></g>
+<circle class="hit" cx="1010.5" cy="880.4" r="22.1" fill="transparent" tabindex="0" aria-label="W7DLZ · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="697.0" y="850.5" width="285.1" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="709.6" y="892.5">W7DLZ · 40m SSB</text></g>
+<circle class="hit" cx="1102.1" cy="1416.4" r="22.1" fill="transparent" tabindex="0" aria-label="NT6E · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="806.0" y="1386.5" width="267.8" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="818.6" y="1428.5">NT6E · 40m SSB</text></g>
+<circle class="hit" cx="967.2" cy="1000.2" r="22.1" fill="transparent" tabindex="0" aria-label="K6KM · W7N/WC-003 · 20m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="995.5" y="970.3" width="493.0" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="1008.1" y="1012.3">K6KM · W7N/WC-003 · 20m SSB</text></g>
+<circle class="hit" cx="1429.2" cy="1269.9" r="22.1" fill="transparent" tabindex="0" aria-label="KR7RK · W7A/AE-044 · 40m SSB"/>
+<g class="tip" font-size="34.6" fill="#ffffff"><rect x="890.6" y="1240.0" width="510.3" height="59.8" rx="9.4" fill="#001018" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.9"/><text x="903.2" y="1282.0">KR7RK · W7A/AE-044 · 40m SSB</text></g>
+</svg>
